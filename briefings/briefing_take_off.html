@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Line Up &amp; Take Off — FI Lesson Briefing Package</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0b1e35;
+    --sky:        #1e6fa8;
+    --sky-light:  #3a9bd5;
+    --amber:      #e8a020;
+    --white:      #f5f7fa;
+    --offwhite:   #eaeef3;
+    --muted:      #6b7e93;
+    --red:        #c0392b;
+    --green:      #1a7a4a;
+    --divider:    rgba(30,111,168,0.18);
+    --card-bg:    #ffffff;
+    --section-bg: #f0f4f9;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body:    'IBM Plex Sans', sans-serif;
+    --font-mono:    'IBM Plex Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--offwhite); font-family: var(--font-body); color: var(--navy); font-size: 14px; line-height: 1.65; }
+  .page { max-width: 960px; margin: 0 auto; padding: 0 0 60px; }
+  .cover { background: var(--navy); color: var(--white); padding: 48px 48px 36px; position: relative; overflow: hidden; }
+  .cover::before { content: ''; position: absolute; top: -60px; right: -80px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(30,111,168,0.35) 0%, transparent 70%); pointer-events: none; }
+  .cover::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--sky) 0%, var(--amber) 60%, var(--sky-light) 100%); }
+  .cover-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+  .org-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--sky-light); text-transform: uppercase; margin-bottom: 6px; }
+  .cover-title { font-family: var(--font-display); font-size: 64px; letter-spacing: 0.04em; line-height: 0.95; color: var(--white); }
+  .cover-title span { color: var(--amber); }
+  .cover-subtitle { font-family: var(--font-mono); font-size: 12px; color: var(--sky-light); margin-top: 12px; letter-spacing: 0.08em; }
+  .cover-badges { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; flex-shrink: 0; }
+  .cover-badge { background: var(--sky); border-radius: 8px; padding: 14px 20px; text-align: right; min-width: 160px; }
+  .cover-badge.dark { background: #1a3a58; }
+  .cover-badge .label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; color: rgba(255,255,255,0.65); text-transform: uppercase; }
+  .cover-badge .value { font-family: var(--font-display); font-size: 28px; color: var(--white); margin-top: 2px; }
+  .cover-badge .value.sm { font-size: 20px; }
+  .cover-divider { height: 1px; background: rgba(255,255,255,0.12); margin: 28px 0 20px; }
+  .cover-foot { font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; }
+  .front-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 28px 32px; background: var(--card-bg); border-bottom: 2px solid var(--sky); }
+  .front-grid .full { grid-column: 1 / -1; }
+  .fp-card { background: var(--section-bg); border-left: 4px solid var(--sky); border-radius: 0 6px 6px 0; padding: 14px 16px; }
+  .fp-card.amber { border-left-color: var(--amber); }
+  .fp-card.red   { border-left-color: var(--red); }
+  .fp-card.green { border-left-color: var(--green); }
+  .fp-card.navy  { border-left-color: var(--navy); }
+  .fp-card h3 { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .fp-card p, .fp-card li { font-size: 13px; color: var(--navy); line-height: 1.6; }
+  .fp-card ul { padding-left: 16px; }
+  .fp-card li { margin-bottom: 3px; }
+  .tol-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .tol-item { text-align: center; background: var(--navy); color: var(--white); border-radius: 6px; padding: 10px 8px; }
+  .tol-item .tol-label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em; color: var(--sky-light); text-transform: uppercase; }
+  .tol-item .tol-value { font-family: var(--font-display); font-size: 20px; color: var(--amber); margin-top: 2px; }
+  .section-header { display: flex; align-items: center; gap: 16px; padding: 20px 32px 14px; background: var(--navy); }
+  .section-num { font-family: var(--font-display); font-size: 52px; color: var(--amber); line-height: 1; min-width: 44px; }
+  .section-title-block h2 { font-family: var(--font-display); font-size: 30px; color: var(--white); letter-spacing: 0.06em; }
+  .section-title-block p { font-family: var(--font-mono); font-size: 11px; color: var(--sky-light); letter-spacing: 0.1em; margin-top: 2px; }
+  .section-body { background: var(--card-bg); padding: 24px 32px; border-bottom: 3px solid var(--divider); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .content-block { background: var(--section-bg); border-radius: 6px; padding: 16px 18px; margin-bottom: 16px; }
+  .content-block:last-child { margin-bottom: 0; }
+  .content-block h4 { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sky); border-bottom: 1px solid var(--divider); padding-bottom: 6px; margin-bottom: 10px; }
+  .content-block p, .content-block li { font-size: 13px; line-height: 1.65; color: #1a2e42; }
+  .content-block p + p { margin-top: 8px; }
+  .content-block ul { padding-left: 16px; }
+  .content-block li { margin-bottom: 4px; }
+  .manoeuvre-box { background: var(--navy); border-radius: 8px; padding: 18px 20px; color: var(--white); margin-bottom: 16px; }
+  .manoeuvre-box.mid  { background: #0d2e4a; }
+  .manoeuvre-box.deep { background: #1a3340; }
+  .manoeuvre-box h4 { font-family: var(--font-display); font-size: 18px; color: var(--amber); letter-spacing: 0.06em; margin-bottom: 12px; }
+  .step-list { counter-reset: step; list-style: none; padding: 0; }
+  .step-list li { counter-increment: step; display: flex; gap: 12px; margin-bottom: 8px; font-size: 13px; line-height: 1.5; color: rgba(245,247,250,0.92); }
+  .step-list li::before { content: counter(step); background: var(--sky); color: var(--white); font-family: var(--font-mono); font-size: 10px; font-weight: 600; min-width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .sop-ref { display: inline-flex; align-items: center; gap: 4px; background: rgba(30,111,168,0.10); border: 1px solid rgba(30,111,168,0.25); border-radius: 4px; padding: 3px 8px; font-family: var(--font-mono); font-size: 10px; color: var(--sky); letter-spacing: 0.06em; white-space: nowrap; }
+  .sop-ref::before { content: '§'; font-weight: 700; margin-right: 2px; }
+  .ref-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .warning-box { background: #fff4e0; border-left: 4px solid var(--amber); border-radius: 0 6px 6px 0; padding: 12px 16px; margin-bottom: 16px; font-size: 13px; color: #5c3800; line-height: 1.6; }
+  .warning-box strong { color: #a06800; }
+  .check-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .check-item { border: 2px solid var(--divider); border-radius: 6px; padding: 12px 14px; position: relative; }
+  .check-item .check-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky); margin-bottom: 6px; }
+  .check-item p { font-size: 13px; color: var(--navy); line-height: 1.5; padding-right: 22px; }
+  .check-item .cb { width: 16px; height: 16px; border: 2px solid var(--muted); border-radius: 3px; position: absolute; top: 12px; right: 12px; }
+  .doc-footer { background: var(--navy); color: rgba(255,255,255,0.45); padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; }
+  .doc-footer span { color: var(--sky-light); }
+  @media print { body { background: white; font-size: 12px; } .cover { break-after: page; } .section-header, .section-body { break-inside: avoid; } .front-grid { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══════════════════ COVER ═══════════════════ -->
+  <div class="cover">
+    <div class="cover-top">
+      <div>
+        <div class="org-label">CAPA · P-Mentor · EASA PPL · VFR</div>
+        <div class="cover-title">LINE UP &amp;<br><span>TAKE OFF</span></div>
+        <div class="cover-subtitle">FI LESSON BRIEFING PACKAGE &nbsp;·&nbsp; NORMAL TAKE-OFF · CIRCUIT DEPARTURE</div>
+      </div>
+      <div class="cover-badges">
+        <div class="cover-badge">
+          <div class="label">Duration</div>
+          <div class="value">10 MIN</div>
+        </div>
+        <div class="cover-badge dark">
+          <div class="label">Aircraft</div>
+          <div class="value sm">PA28</div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-divider"></div>
+    <div class="cover-foot">CAPA SOP Ed.2 Rev.1 &nbsp;·&nbsp; ATP INT. LESSON PREP — DGH 03 &nbsp;·&nbsp; EKRK AERODROME</div>
+  </div>
+
+  <!-- ═══════════════════ FRONT PAGE GRID ═══════════════════ -->
+  <div class="front-grid">
+
+    <div class="fp-card">
+      <h3>Lesson Objectives</h3>
+      <ul>
+        <li>Complete the pre-take-off (TMPFS) check correctly, in sequence, with verbal call-outs</li>
+        <li>Perform a safe runway line-up: check final approach, call "CLEAR LEFT — CLEAR RIGHT"</li>
+        <li>Maintain runway centreline throughout the take-off roll using rudder only</li>
+        <li>Identify Vr (65 KIAS), call "ROTATE", and adopt the correct initial climb attitude</li>
+        <li>Achieve and maintain Vy (79 KIAS) in the initial climb, trimmed, ball centred</li>
+        <li>Complete the after-take-off check at the correct height with all items called out</li>
+      </ul>
+    </div>
+
+    <div class="fp-card amber">
+      <h3>Student Prerequisites</h3>
+      <ul>
+        <li>DGH 01 / DGH 02 completed — basic controls, attitude flying and trim technique established</li>
+        <li>Understands nose-horizon attitude as primary control reference</li>
+        <li>Familiar with PA28 cockpit layout and normal checklist flow</li>
+        <li>Aware of slipstream / P-factor yaw tendency on power application</li>
+        <li>Basic ATC radio procedures for EKRK — take-off clearance format</li>
+      </ul>
+    </div>
+
+    <div class="fp-card full navy">
+      <h3>Performance Tolerances &nbsp;<span style="font-size:11px;color:var(--muted);font-weight:300">(CAPA SOP / ATP INT. DGH 03)</span></h3>
+      <div class="tol-row" style="margin-top:10px">
+        <div class="tol-item">
+          <div class="tol-label">Centreline</div>
+          <div class="tol-value">±5°</div>
+        </div>
+        <div class="tol-item">
+          <div class="tol-label">Rotation</div>
+          <div class="tol-value">65 kt</div>
+        </div>
+        <div class="tol-item">
+          <div class="tol-label">Climb (Vy)</div>
+          <div class="tol-value">±5 kt</div>
+        </div>
+        <div class="tol-item">
+          <div class="tol-label">Altitude</div>
+          <div class="tol-value">±150 ft</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fp-card green">
+      <h3>Motivation</h3>
+      <p>Take-off is the most time-compressed manoeuvre in circuit flying — full power, directional control, rotation, and an immediate engine-failure decision all occur within 30–60 seconds. A precise, rehearsed procedure eliminates hesitation and builds the habit of positive aircraft control that underpins all future flying. Runway incursion and loss of directional control on the roll are leading causes of GA accidents: this lesson establishes the habits that prevent both.</p>
+    </div>
+
+    <div class="fp-card red">
+      <h3>Common Mistakes</h3>
+      <ul>
+        <li>Not checking final approach before line-up — runway incursion risk</li>
+        <li>Advancing throttle before aircraft is aligned on centreline</li>
+        <li>Using aileron for directional control during the roll instead of rudder</li>
+        <li>"White-knuckle" grip — tense inputs instead of light, purposeful control</li>
+        <li>Waiting for the aircraft to fly itself off instead of actively rotating at Vr</li>
+        <li>Rotating with a "pull" movement rather than adopting the climb attitude positively</li>
+        <li>Forgetting the after-take-off check or performing it too late / too early</li>
+        <li>Not monitoring engine instruments within 5 seconds of full power — missing an engine problem</li>
+      </ul>
+    </div>
+
+    <div class="fp-card full">
+      <h3>FI References</h3>
+      <div class="ref-row">
+        <span class="sop-ref">CAPA SOP §2.1 — Pre-Take-Off Check (TMPFS)</span>
+        <span class="sop-ref">CAPA SOP §2.2 — Line-Up Procedure</span>
+        <span class="sop-ref">CAPA SOP §2.3 — Normal Take-Off</span>
+        <span class="sop-ref">CAPA SOP §2.4 — After-Take-Off Check</span>
+        <span class="sop-ref">ATP INT. Lesson Prep — DGH 03</span>
+        <span class="sop-ref">EGAST GA1 — Collision Avoidance</span>
+      </div>
+    </div>
+
+  </div><!-- /front-grid -->
+
+
+  <!-- ═══════════════════ SECTION 01: ENVIRONMENT ═══════════════════ -->
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title-block">
+      <h2>ENVIRONMENT</h2>
+      <p>AERODYNAMICS · CONDITIONS · AIRMANSHIP &amp; RUNWAY SAFETY</p>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="two-col">
+
+      <div>
+        <div class="content-block">
+          <h4>Theory — Forces During Take-Off Roll</h4>
+          <p>On the take-off roll, thrust accelerates the aircraft and lift builds as airspeed increases. At low speed, all primary flight controls are less effective — directional control is maintained primarily by <strong>rudder</strong> (propeller slipstream gives authority even at low speed) rather than aileron or nosewheel steering.</p>
+          <p>Left-yawing tendency is most pronounced as power is applied: slipstream spirals aft and strikes the left side of the vertical fin, propeller torque rolls the aircraft slightly left (increasing left main gear friction), and P-factor at high angle of attack creates asymmetric thrust. <em>Anticipate with pre-emptive right rudder.</em></p>
+        </div>
+        <div class="content-block">
+          <h4>Theory — Rotation and Ground Effect</h4>
+          <p>At Vr (65 KIAS), the pilot adopts the initial climb attitude — nose lifted to the correct pitch angle. The aircraft accelerates to Vy in ground effect (within one wingspan height), where induced drag is significantly reduced. The correct technique is to <strong>set the attitude</strong> and let the speed stabilise, not to pull back on the controls. This is consistent with the nose-attitude-first philosophy of all PA28 manoeuvres.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="content-block">
+          <h4>Training Conditions (ATP INT. DGH 03)</h4>
+          <ul>
+            <li>Good visibility and cloudbase — VMC throughout</li>
+            <li>Wind: calm to light (≤10 kt) for initial take-off lessons</li>
+            <li>Location: EKRK — RWY as instructed by ATC</li>
+            <li>Runway surface: dry (wet runway requires increased abort awareness)</li>
+            <li>Engine instruments in the green before power application</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h4>Airmanship — Runway Incursion Prevention (CAPA SOP)</h4>
+          <ul>
+            <li>At holding point: visually check final approach path is clear — do not rely solely on ATC clearance</li>
+            <li>On entering the runway: call "CLEAR LEFT — CLEAR RIGHT" out loud before lining up</li>
+            <li>After line-up: if any doubt about clearance, hold and re-confirm with ATC</li>
+            <li>Once take-off roll begins: commit to runway heading — no steering corrections with brakes</li>
+            <li>Engine failure after take-off (EFATO): pre-brief before every take-off — landing ahead, no turn back below 1,000 ft</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h4>SOP References</h4>
+          <div class="ref-row">
+            <span class="sop-ref">CAPA SOP §2.1–2.4 — Take-Off Sequence</span>
+            <span class="sop-ref">EGAST GA1 — Collision Avoidance</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════ SECTION 02: SETUP ═══════════════════ -->
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title-block">
+      <h2>SETUP</h2>
+      <p>PRE-TAKE-OFF CHECK · LINE-UP · AIRCRAFT CONFIGURATION</p>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="two-col">
+
+      <div>
+        <div class="content-block">
+          <h4>Pre-Take-Off Check — TMPFS (CAPA SOP §2.1)</h4>
+          <p>Performed at the holding point, engine at 1000 RPM, before requesting take-off clearance. Verbalise each item — "singing the song" builds habit and prevents omissions under pressure.</p>
+          <ul style="margin-top:8px">
+            <li><strong>T</strong> — Trim: set for take-off (neutral or slight nose-up)</li>
+            <li><strong>M</strong> — Mixture: full rich (EKRK elevation ~33 ft — always rich)</li>
+            <li><strong>P</strong> — Primer: in and locked</li>
+            <li><strong>F</strong> — Fuel: on, fullest/both tanks, boost pump ON then OFF (check fuel pressure), quantity sufficient</li>
+            <li><strong>S</strong> — Switches: beacon ON, strobes ON, landing light ON, transponder ALT, carb heat COLD (confirm RPM drop and recovery during run-up)</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h4>Engine Run-Up</h4>
+          <ul>
+            <li>Power: 1,800 RPM — check magnetos (max drop 125 RPM, max differential 50 RPM)</li>
+            <li>Carburettor heat: ON — note RPM drop (icing check); return to COLD, confirm RPM recovers</li>
+            <li>Engine instruments: oil temp/pressure, EGT — all in green arc</li>
+            <li>Suction gauge: 4.6–5.4 in/Hg (gyro instruments serviceable)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="content-block">
+          <h4>Aircraft Configuration for Take-Off</h4>
+          <ul>
+            <li>Flaps: <strong>0°</strong> — normal take-off (no flaps gives best accelerate-stop distance and climb performance)</li>
+            <li>Trim: set to take-off position</li>
+            <li>Doors and windows: confirmed closed and latched</li>
+            <li>Seats and harnesses: adjusted and locked — check student seat position allows full control travel</li>
+            <li>DI: aligned with compass / runway heading before entering runway</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h4>PA28 Take-Off Performance (ISA, Sea Level, MTOW)</h4>
+          <ul>
+            <li>V<sub>R</sub> (rotation): <strong>65 KIAS</strong></li>
+            <li>V<sub>y</sub> (best rate of climb): <strong>79 KIAS</strong></li>
+            <li>V<sub>x</sub> (best angle of climb): <strong>70 KIAS</strong></li>
+            <li>Ground roll (no wind): approx. 980 ft</li>
+            <li>Obstacle clearance (50 ft): approx. 1,490 ft</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h4>SOP References</h4>
+          <div class="ref-row">
+            <span class="sop-ref">CAPA SOP §2.1 — TMPFS Check</span>
+            <span class="sop-ref">CAPA SOP §2.2 — Line-Up</span>
+            <span class="sop-ref">ATP INT. DGH 03</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════ SECTION 03: EXECUTION ═══════════════════ -->
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title-block">
+      <h2>EXECUTION</h2>
+      <p>LINE-UP · TAKE-OFF ROLL · ROTATION · INITIAL CLIMB · AFTER-T/O CHECK</p>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="warning-box">
+      <strong>Key principle (CAPA SOP §2.3):</strong> Think aircraft manoeuvre, not control input. Do not "pull back on the stick" — adopt the climb attitude. Once Vr is called, set the nose to the correct pitch picture and hold it there. The aircraft will fly itself off when ready.
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="manoeuvre-box">
+          <h4>LINE-UP</h4>
+          <ol class="step-list">
+            <li>At holding point: TMPFS complete, ATC take-off clearance received and read back.</li>
+            <li>Check final approach: look left, right, final. Call out: <em>"CLEAR LEFT — CLEAR RIGHT."</em></li>
+            <li>Enter runway and taxi to centreline. Stop aligned on runway heading.</li>
+            <li>Set DI to runway heading. Verify wind direction indicator / sock.</li>
+            <li>Pre-take-off EFATO brief: <em>"Engine failure after take-off — land ahead. No turn back below 1,000 ft."</em></li>
+          </ol>
+        </div>
+
+        <div class="manoeuvre-box mid">
+          <h4>TAKE-OFF ROLL</h4>
+          <ol class="step-list">
+            <li>Feet lightly on rudder pedals — <strong>NOT on brakes.</strong> Apply light right rudder pre-emptively.</li>
+            <li>Advance throttle smoothly to full power. Call: <em>"FULL POWER."</em></li>
+            <li>Within 5 sec: scan engine instruments. Oil pressure, RPM — call: <em>"Instruments — GREEN."</em></li>
+            <li>Maintain centreline with rudder — progressive right rudder as slipstream effect builds.</li>
+            <li>Monitor airspeed: call <em>"AIRSPEED ALIVE"</em> at first indication (~30 KIAS).</li>
+            <li>At 65 KIAS: call <em>"ROTATE"</em> — set nose to climb attitude. <strong>Adopt attitude, do not pull.</strong></li>
+          </ol>
+        </div>
+      </div>
+
+      <div>
+        <div class="manoeuvre-box deep">
+          <h4>INITIAL CLIMB &amp; AFTER-T/O CHECK</h4>
+          <ol class="step-list">
+            <li>Positive rate of climb confirmed on altimeter and VSI.</li>
+            <li>Maintain Vy attitude — 79 KIAS. Trim to relieve control pressure.</li>
+            <li>Maintain runway centreline extended (track, not heading — correct for drift).</li>
+            <li>Lookout: scan for traffic, especially on crosswind / downwind legs.</li>
+            <li>At 500 ft AGL (or obstacle-clear height): after-take-off check —<br>
+              <em>Carb heat: COLD · Flaps: confirm UP · Trim: as required.</em></li>
+            <li>Continue climb to circuit height (1,000 ft QNH) and turn crosswind as briefed.</li>
+          </ol>
+        </div>
+
+        <div class="content-block">
+          <h4>Instructor Technique Notes</h4>
+          <ul>
+            <li>Demo the first take-off with full narration — student observes stick forces and rudder inputs</li>
+            <li>Hand over controls on second attempt; be ready to take over if directional control deviates beyond ±5° of runway heading</li>
+            <li>Cover airspeed indicator briefly on later attempts to reinforce attitude-first rotation</li>
+            <li>Common FI intervention point: student eases back too gently — coach a definitive attitude adoption at Vr</li>
+            <li>For the 10-min briefing duration, prioritise: TMPFS, centreline technique, rotation, EFATO brief</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h4>SOP References</h4>
+          <div class="ref-row">
+            <span class="sop-ref">CAPA SOP §2.3 — Normal Take-Off</span>
+            <span class="sop-ref">CAPA SOP §2.4 — After-Take-Off Check</span>
+            <span class="sop-ref">ATP INT. DGH 03</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════ SECTION 04: CHECK ═══════════════════ -->
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title-block">
+      <h2>CHECK</h2>
+      <p>ASSESSMENT · DEBRIEF · STANDARDS · PROGRESSION</p>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="content-block" style="margin-bottom:20px">
+      <h4>Lesson Standard — Pass / Progress Criteria</h4>
+      <p>The student completes the TMPFS check verbally in sequence, performs a safe line-up with final approach check, maintains centreline within ±5° of runway heading during the roll using rudder, calls and rotates at 65 KIAS, establishes the climb attitude positively (79 KIAS ±5 kt), and completes the after-take-off check at the correct height. EFATO action is briefed and understood before each take-off.</p>
+    </div>
+
+    <div class="check-grid">
+      <div class="check-item">
+        <div class="check-label">TMPFS Check</div>
+        <p>All items called out in sequence, correctly set. Run-up completed and confirmed before requesting take-off clearance.</p>
+        <div class="cb"></div>
+      </div>
+      <div class="check-item">
+        <div class="check-label">Line-Up Procedure</div>
+        <p>"CLEAR LEFT — CLEAR RIGHT" called before entering runway. ATC clearance read back. DI set to runway heading. EFATO brief stated.</p>
+        <div class="cb"></div>
+      </div>
+      <div class="check-item">
+        <div class="check-label">Engine Monitor</div>
+        <p>Instruments scanned within 5 sec of full power. "Instruments — GREEN" or abort decision if anomaly detected. Smooth power application.</p>
+        <div class="cb"></div>
+      </div>
+      <div class="check-item">
+        <div class="check-label">Directional Control</div>
+        <p>Centreline held within ±5° using rudder only throughout roll. No aileron used for direction. No brake input during roll.</p>
+        <div class="cb"></div>
+      </div>
+      <div class="check-item">
+        <div class="check-label">Rotation Technique</div>
+        <p>"AIRSPEED ALIVE" called. "ROTATE" called at 65 KIAS. Climb attitude adopted positively and held — not pulled or eased gradually.</p>
+        <div class="cb"></div>
+      </div>
+      <div class="check-item">
+        <div class="check-label">After-T/O Check</div>
+        <p>Vy achieved and trimmed. Carb heat COLD, flaps UP confirmed at 500 ft AGL. Trim adjusted. Lookout maintained throughout climb.</p>
+        <div class="cb"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px">
+    <div class="two-col">
+      <div class="content-block">
+        <h4>Debrief Points — Typical Issues</h4>
+        <ul>
+          <li>Drift on roll: student using aileron, not rudder — re-brief slipstream effect, demonstrate rudder authority at low speed</li>
+          <li>Late rotation: student waiting for aircraft to "lift itself" — re-brief Vr as the active command to set attitude</li>
+          <li>Poor attitude after rotation: nose too low (insufficient back-pressure) or too high (overrotation) — cover ASI, fly the nose picture</li>
+          <li>TMPFS items missed: rehearse the mnemonic on the ground before the flight — "singing the song"</li>
+          <li>Tense grip on controls: coach 2–3 fingers only on the yoke throughout</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h4>Progression &amp; Next Lesson</h4>
+        <ul>
+          <li>If take-off standard achieved → introduce circuit procedure and landing pattern (DGH 03 continuation)</li>
+          <li>Progress to crosswind take-off once normal T/O is consistent (DGH 06)</li>
+          <li>EFATO discussion: always pre-brief, introduce formal EFATO exercise in later lessons</li>
+          <li>Link to short-field and soft-field take-off techniques in advanced airwork phase</li>
+        </ul>
+        <div class="ref-row" style="margin-top:12px">
+          <span class="sop-ref">CAPA SOP §2.3–2.4</span>
+          <span class="sop-ref">ATP INT. DGH 03</span>
+          <span class="sop-ref">EGAST GA1 — Collision Avoidance</span>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <div>CAPA · P-MENTOR · VFR · EASA PPL</div>
+    <div><span>LINE UP &amp; TAKE OFF</span> &nbsp;·&nbsp; FI BRIEFING PACKAGE</div>
+    <div>SOP Ed.2 Rev.1 · APR 2026</div>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>

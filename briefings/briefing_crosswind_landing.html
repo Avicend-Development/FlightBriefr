@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crosswind Landing — FI Lesson Briefing Package</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0b1e35;
+    --sky:        #1e6fa8;
+    --sky-light:  #3a9bd5;
+    --amber:      #e8a020;
+    --white:      #f5f7fa;
+    --offwhite:   #eaeef3;
+    --muted:      #6b7e93;
+    --red:        #c0392b;
+    --green:      #1a7a4a;
+    --divider:    rgba(30,111,168,0.18);
+    --card-bg:    #ffffff;
+    --section-bg: #f0f4f9;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body:    'IBM Plex Sans', sans-serif;
+    --font-mono:    'IBM Plex Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--offwhite); font-family: var(--font-body); color: var(--navy); font-size: 14px; line-height: 1.65; }
+  .page { max-width: 960px; margin: 0 auto; padding: 0 0 60px; }
+  .cover { background: var(--navy); color: var(--white); padding: 48px 48px 36px; position: relative; overflow: hidden; }
+  .cover::before { content: ''; position: absolute; top: -60px; right: -80px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(30,111,168,0.35) 0%, transparent 70%); pointer-events: none; }
+  .cover::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--sky) 0%, var(--amber) 60%, var(--sky-light) 100%); }
+  .cover-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+  .org-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--sky-light); text-transform: uppercase; margin-bottom: 6px; }
+  .cover-title { font-family: var(--font-display); font-size: 64px; letter-spacing: 0.04em; line-height: 0.95; color: var(--white); }
+  .cover-title span { color: var(--amber); }
+  .cover-subtitle { font-family: var(--font-mono); font-size: 12px; color: var(--sky-light); margin-top: 12px; letter-spacing: 0.08em; }
+  .cover-badges { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; flex-shrink: 0; }
+  .cover-badge { background: var(--sky); border-radius: 8px; padding: 14px 20px; text-align: right; min-width: 160px; }
+  .cover-badge.dark { background: #1a3a58; }
+  .cover-badge .label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; color: rgba(255,255,255,0.65); text-transform: uppercase; }
+  .cover-badge .value { font-family: var(--font-display); font-size: 28px; color: var(--white); margin-top: 2px; }
+  .cover-badge .value.sm { font-size: 20px; }
+  .cover-divider { height: 1px; background: rgba(255,255,255,0.12); margin: 28px 0 20px; }
+  .cover-foot { font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; }
+  .front-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 28px 32px; background: var(--card-bg); border-bottom: 2px solid var(--sky); }
+  .front-grid .full { grid-column: 1 / -1; }
+  .fp-card { background: var(--section-bg); border-left: 4px solid var(--sky); border-radius: 0 6px 6px 0; padding: 14px 16px; }
+  .fp-card.amber { border-left-color: var(--amber); }
+  .fp-card.red   { border-left-color: var(--red); }
+  .fp-card.green { border-left-color: var(--green); }
+  .fp-card.navy  { border-left-color: var(--navy); }
+  .fp-card h3 { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .fp-card p, .fp-card li { font-size: 13px; color: var(--navy); line-height: 1.6; }
+  .fp-card ul { padding-left: 16px; }
+  .fp-card li { margin-bottom: 3px; }
+  .tol-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .tol-item { text-align: center; background: var(--navy); color: var(--white); border-radius: 6px; padding: 10px 8px; }
+  .tol-item .tol-label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em; color: var(--sky-light); text-transform: uppercase; }
+  .tol-item .tol-value { font-family: var(--font-display); font-size: 20px; color: var(--amber); margin-top: 2px; }
+  .section-header { display: flex; align-items: center; gap: 16px; padding: 20px 32px 14px; background: var(--navy); }
+  .section-num { font-family: var(--font-display); font-size: 52px; color: var(--amber); line-height: 1; min-width: 44px; }
+  .section-title-block h2 { font-family: var(--font-display); font-size: 30px; color: var(--white); letter-spacing: 0.06em; }
+  .section-title-block p { font-family: var(--font-mono); font-size: 11px; color: var(--sky-light); letter-spacing: 0.1em; margin-top: 2px; }
+  .section-body { background: var(--card-bg); padding: 24px 32px; border-bottom: 3px solid var(--divider); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .content-block { background: var(--section-bg); border-radius: 6px; padding: 16px 18px; margin-bottom: 16px; }
+  .content-block:last-child { margin-bottom: 0; }
+  .content-block h4 { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sky); border-bottom: 1px solid var(--divider); padding-bottom: 6px; margin-bottom: 10px; }
+  .content-block p, .content-block li { font-size: 13px; line-height: 1.65; color: #1a2e42; }
+  .content-block p + p { margin-top: 8px; }
+  .content-block ul { padding-left: 16px; }
+  .content-block li { margin-bottom: 4px; }
+  .manoeuvre-box { background: var(--navy); border-radius: 8px; padding: 18px 20px; color: var(--white); margin-bottom: 16px; }
+  .manoeuvre-box.mid  { background: #0d2e4a; }
+  .manoeuvre-box.deep { background: #1a3340; }
+  .manoeuvre-box h4 { font-family: var(--font-display); font-size: 18px; color: var(--amber); letter-spacing: 0.06em; margin-bottom: 12px; }
+  .step-list { counter-reset: step; list-style: none; padding: 0; }
+  .step-list li { counter-increment: step; display: flex; gap: 12px; margin-bottom: 8px; font-size: 13px; line-height: 1.5; color: rgba(245,247,250,0.92); }
+  .step-list li::before { content: counter(step); background: var(--sky); color: var(--white); font-family: var(--font-mono); font-size: 10px; font-weight: 600; min-width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .sop-ref { display: inline-flex; align-items: center; gap: 4px; background: rgba(30,111,168,0.10); border: 1px solid rgba(30,111,168,0.25); border-radius: 4px; padding: 3px 8px; font-family: var(--font-mono); font-size: 10px; color: var(--sky); letter-spacing: 0.06em; white-space: nowrap; }
+  .sop-ref::before { content: '§'; font-weight: 700; margin-right: 2px; }
+  .ref-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .warning-box { background: #fff4e0; border-left: 4px solid var(--amber); border-radius: 0 6px 6px 0; padding: 12px 16px; margin-bottom: 16px; font-size: 13px; color: #5c3800; line-height: 1.6; }
+  .warning-box strong { color: #a06800; }
+  .check-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .check-item { border: 2px solid var(--divider); border-radius: 6px; padding: 12px 14px; position: relative; }
+  .check-item .check-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky); margin-bottom: 6px; }
+  .check-item p { font-size: 13px; color: var(--navy); line-height: 1.5; padding-right: 22px; }
+  .check-item .cb { width: 16px; height: 16px; border: 2px solid var(--muted); border-radius: 3px; position: absolute; top: 12px; right: 12px; }
+  .doc-footer { background: var(--navy); color: rgba(255,255,255,0.45); padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; }
+  .doc-footer span { color: var(--sky-light); }
+  @media print { body { background: white; font-size: 12px; } .cover { break-after: page; } .section-header, .section-body { break-inside: avoid; } .front-grid { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══════════════════ COVER ═══════════════════ -->
+  <div class="cover">
+    <div class="cover-top">
+      <div>
+        <div class="org-label">CAPA · P-Mentor · EASA PPL · VFR</div>
+        <div class="cover-title">CROSSWIND<br><span>LANDING</span></div>
+        <div class="cover-subtitle">FI LESSON BRIEFING PACKAGE &nbsp;·&nbsp; CRAB · WING-LOW · COMBINATION TECHNIQUE</div>
+      </div>
+      <div class="cover-badges">
+        <div class="cover-badge">
+          <div class="label">Duration</div>
+          <div class="value">15 MIN</div>
+        </div>
+        <div class="cover-badge dark">
+          <div class="label">Aircraft</div>
+          <div class="value sm">PA28</div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-divider"></div>
+    <div class="cover-foot">CAPA SOP Ed.2 Rev.1 &nbsp;·&nbsp; ATP INT. LESSON PREP — DGH 06 &nbsp;·&nbsp; EKRK AERODROME</div>
+  </div>
+
+  <!-- ═══════════════════ FRONT PAGE GRID ═══════════════════ -->
+  <div class="front-grid">
+
+    <div class="fp-card">
+      <h3>Lesson Objectives</h3>
+      <ul>
+        <li>Calculate the crosswind component from ATIS and assess against PA28 limits before flight</li>
+        <li>Explain and distinguish between the crab, wing-low, and combination techniques</li>
+        <li>Perform a stabilised crosswind approach to threshold, maintaining centreline and glidepath</li>
+        <li>Transition correctly to wing-low (sideslip) technique at 300 ft AGL</li>
+        <li>Execute a touchdown with the upwind wheel first, aligned with the runway heading, on centreline</li>
+        <li>Apply continuous into-wind aileron and rudder control during the landing roll-out</li>
+        <li>Make timely and correct go-around decisions when the approach is not stabilised</li>
+      </ul>
+    </div>
+
+    <div class="fp-card amber">
+      <h3>Student Prerequisites</h3>
+      <ul>
+        <li>Normal landing competent and consistent (DGH 05 / DGH 06 intro)</li>
+        <li>Stabilised approach concept understood — PAPI assessment, speed control on final</li>
+        <li>Go-around procedure drilled and confident — student must initiate without prompting</li>
+        <li>Slip and skid awareness — ball discipline, rudder and aileron coordination</li>
+        <li>Familiar with PA28 max demonstrated crosswind limit (17 kt)</li>
+      </ul>
+    </div>
+
+    <div class="fp-card full navy">
+      <h3>Performance Tolerances &nbsp;<span style="font-size:11px;color:var(--muted);font-weight:300">(CAPA SOP / ATP INT. DGH 06)</span></h3>
+      <div class="tol-row" style="margin-top:10px">
+        <div class="tol-item">
+          <div class="tol-label">Altitude</div>
+          <div class="tol-value">±150 ft</div>
+        </div>
+        <div class="tol-item">
+          <div class="tol-label">Approach Spd</div>
+          <div class="tol-value">+10/–0</div>
+        </div>
+        <div class="tol-item">
+          <div class="tol-label">Glidepath</div>
+          <div class="tol-value">≥2 red</div>
+        </div>
+        <div class="tol-item">
+          <div class="tol-label">Heading ±</div>
+          <div class="tol-value">15°</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fp-card green">
+      <h3>Motivation</h3>
+      <p>Crosswind landings account for a disproportionately high share of GA runway-excursion and ground-loop accidents. The PA28 has a max demonstrated crosswind of 17 kt, but technique failures cause accidents well below this value. Mastery of the wing-low technique — using aileron and rudder independently — builds the coordination foundation for all asymmetric and unusual attitude recovery work. This lesson directly protects the student's future as a safe, solo pilot.</p>
+    </div>
+
+    <div class="fp-card red">
+      <h3>Common Mistakes</h3>
+      <ul>
+        <li>Using aileron as if for a turn (banking hard) instead of maintaining a controlled sideslip with opposite rudder</li>
+        <li>Releasing the into-wind aileron too early in the flare — aircraft drifts at touchdown</li>
+        <li>Touching down in a drift — lateral load on undercarriage; potential for ground loop</li>
+        <li>Forgetting the final check during the approach workload (ATP INT. DGH 06)</li>
+        <li>Late or no go-around when approach is clearly not stabilised — hesitation, then committing to a bad approach</li>
+        <li>Forgetting to set carburettor heat to COLD during go-around (ATP INT. DGH 06)</li>
+        <li>Not maintaining into-wind aileron after touchdown — relaxing control during ground roll</li>
+        <li>Correcting drift on short final with rudder alone instead of rebalancing sideslip</li>
+      </ul>
+    </div>
+
+    <div class="fp-card full">
+      <h3>FI References</h3>
+      <div class="ref-row">
+        <span class="sop-ref">CAPA SOP §3.5 — Crosswind Landing Technique</span>
+        <span class="sop-ref">CAPA SOP §3.4 — Stabilised Approach Criteria</span>
+        <span class="sop-ref">CAPA SOP §3.6 — Go-Around Procedure</span>
+        <span class="sop-ref">ATP INT. Lesson Prep — DGH 06</span>
+        <span class="sop-ref">EGAST GA1 — Collision Avoidance</span>
+        <span class="sop-ref">PA28 POH §4 — Crosswind Limits</span>
+      </div>
+    </div>
+
+  </div><!-- /front-grid -->
+
+
+  <!-- ═══════════════════ SECTION 01: ENVIRONMENT ═══════════════════ -->
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title-block">
+      <h2>ENVIRONMENT</h2>
+      <p>CROSSWIND THEORY · DRIFT &amp; SIDESLIP · AIRMANSHIP</p>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="two-col">
+
+      <div>
+        <div class="content-block">
+          <h4>Theory — Drift and Crab Angle</h4>
+          <p>When flying a heading aligned with the runway centreline in a crosswind, the aircraft drifts downwind. To track the extended centreline on final approach, a <strong>crab angle</strong> must be flown — the nose is angled into wind so the ground track equals the runway track. The crab angle depends on the crosswind component and the aircraft's groundspeed: stronger crosswind or slower approach speed = larger crab angle.</p>
+          <p>Crab is comfortable and efficient during the approach, but if maintained to touchdown, the aircraft will track correctly but land with a yaw angle relative to the runway, causing side-loads on the undercarriage.</p>
+        </div>
+        <div class="content-block">
+          <h4>Theory — Sideslip (Wing-Low Technique)</h4>
+          <p>In a sideslip, the aircraft is deliberately slipped into wind: <strong>into-wind (upwind) aileron</strong> lowers the upwind wing, and <strong>downwind (opposite) rudder</strong> keeps the nose aligned with the runway heading. The aircraft tracks the centreline while the fuselage acts as a skid. The upwind main gear touches first, absorbing lateral force progressively. This is the safest technique for landing in a crosswind.</p>
+          <p>Note: in a sideslip the balance ball is displaced toward the into-wind side. This is <em>correct and intentional</em> — brief the student that a centred ball in this phase indicates the sideslip has been lost.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="content-block">
+          <h4>Crosswind Component (ATP INT. DGH 06)</h4>
+          <ul>
+            <li>XWC = Wind speed × sin(angle from runway heading)</li>
+            <li>Example: 15 kt at 30° off runway = <strong>7.5 kt crosswind</strong></li>
+            <li>PA28-161 max demonstrated crosswind: <strong>17 kt</strong></li>
+            <li>CAPA limit for student solo: check current SOPs / FI guidance</li>
+            <li>Always calculate from ATIS before flight. If at or near limit: reassess after landing inspection</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h4>Training Conditions (ATP INT. DGH 06)</h4>
+          <ul>
+            <li>Good visibility and cloudbase — VMC, EKRK circuit</li>
+            <li>Crosswind: introduce at 5–10 kt component; build toward limit progressively</li>
+            <li>Non-gusty conditions preferred for initial introduction</li>
+            <li>PAPI serviceable — approach below 2° angle (4× red) requires go-around</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h4>SOP References</h4>
+          <div class="ref-row">
+            <span class="sop-ref">CAPA SOP §3.5 — Crosswind Technique</span>
+            <span class="sop-ref">PA28 POH §4 — Performance</span>
+            <span class="sop-ref">EGAST GA1 — Collision Avoidance</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════ SECTION 02: SETUP ═══════════════════ -->
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title-block">
+      <h2>SETUP</h2>
+      <p>ATIS · CROSSWIND CALC · APPROACH CONFIG · THREE TECHNIQUES</p>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="two-col">
+
+      <div>
+        <div class="content-block">
+          <h4>Pre-Flight — ATIS Assessment</h4>
+          <ul>
+            <li>Obtain ATIS: note wind direction, speed, gusts, active runway</li>
+            <li>Calculate crosswind component — if close to limit, re-evaluate inflight</li>
+            <li>Note gust factor: if gusts ≥10 kt, add half the gust increment to Vapp: e.g. wind 10G20 kt → add 5 kt to Vapp = 80 KIAS</li>
+            <li>Consider flap setting: in strong crosswind, flaps 25° (not full) preserves aileron authority and reduces weathercocking tendency</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h4>The Three Techniques</h4>
+          <ul>
+            <li><strong>Crab method:</strong> maintain crab throughout approach, straighten to runway heading at the last moment before touchdown. Risk: mistiming the straightening — lateral drift at touchdown.</li>
+            <li><strong>Wing-low (sideslip):</strong> maintain runway heading throughout using into-wind aileron + opposite rudder. Most reliable for touchdown precision.</li>
+            <li><strong>Combination (CAPA recommended):</strong> crab from base to 300 ft AGL, then transition to wing-low for the last 300 ft and landing. Best of both: accurate tracking on approach, precise touchdown.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="content-block">
+          <h4>Aircraft Configuration — Crosswind Landing</h4>
+          <ul>
+            <li>Flaps: <strong>25°</strong> (preferred in crosswind ≥10 kt) — full flap in strong crosswind reduces aileron authority</li>
+            <li>Approach speed (Vapp): <strong>75 KIAS</strong> clean; adjust +5 kt for gusts</li>
+            <li>Trim: trimmed for approach speed — allows precise control pressure</li>
+            <li>Carb heat: as required for conditions / per normal approach procedure</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h4>Stabilised Approach Criteria (CAPA SOP §3.4)</h4>
+          <p>By 300 ft AGL the approach must be stabilised: correct speed, on glidepath (2 white / 2 red PAPI), on centreline, correct configuration. If any criterion is not met by 300 ft: <strong>go-around.</strong></p>
+          <p style="margin-top:8px">Call-out at 300 ft: <em>"STABLE"</em> (or initiate go-around).</p>
+        </div>
+        <div class="content-block">
+          <h4>SOP References</h4>
+          <div class="ref-row">
+            <span class="sop-ref">CAPA SOP §3.4 — Stabilised Approach</span>
+            <span class="sop-ref">CAPA SOP §3.5 — Crosswind Technique</span>
+            <span class="sop-ref">ATP INT. DGH 06</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════ SECTION 03: EXECUTION ═══════════════════ -->
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title-block">
+      <h2>EXECUTION</h2>
+      <p>FINAL APPROACH · TRANSITION TO WING-LOW · FLARE &amp; TOUCHDOWN · GO-AROUND</p>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="warning-box">
+      <strong>Key principle (CAPA SOP §3.5):</strong> Forget about the flight controls — fly the aircraft. The goal is to maintain the correct runway alignment and centreline tracking. Aileron controls lateral position; rudder controls heading. They are used independently in the sideslip, not as a coordinated pair. Keep the upwind wing down and the nose on the runway heading until the wheels are on the ground.
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="manoeuvre-box">
+          <h4>FINAL APPROACH — CRAB PHASE</h4>
+          <ol class="step-list">
+            <li>Turn onto final. Assess drift: if drifting, increase crab angle toward wind until centreline is maintained.</li>
+            <li>Set approach configuration: flaps 25°, 75 KIAS. Trim for approach speed.</li>
+            <li>PAPI check: aim for 2 white / 2 red. Power controls glidepath; attitude controls airspeed.</li>
+            <li>Complete final check (CAPA SOP): call out all items.</li>
+            <li>At 300 ft: assess — stabilised? Call <em>"STABLE"</em> or initiate go-around immediately.</li>
+            <li>Maintain crab angle to 300 ft, tracking centreline precisely with visual reference to runway.</li>
+          </ol>
+        </div>
+
+        <div class="manoeuvre-box mid">
+          <h4>TRANSITION TO WING-LOW (300 ft AGL)</h4>
+          <ol class="step-list">
+            <li>At 300 ft AGL: smoothly apply <strong>into-wind aileron</strong> — lower the upwind wing 5–10°.</li>
+            <li>Simultaneously apply <strong>opposite (downwind) rudder</strong> to maintain runway heading — prevent the aircraft from turning into the bank.</li>
+            <li>Adjust aileron to maintain centreline — more aileron if drifting downwind, less if tracking accurately.</li>
+            <li>Adjust rudder continuously to hold runway heading — the balance ball will be displaced into-wind. This is correct.</li>
+            <li>Continue approach: attitude controls airspeed, power controls glidepath.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div>
+        <div class="manoeuvre-box deep">
+          <h4>FLARE, TOUCHDOWN &amp; GROUND ROLL</h4>
+          <ol class="step-list">
+            <li>Flare normally: reduce power progressively, raise nose gently to arrest rate of descent.</li>
+            <li>Maintain into-wind aileron and downwind rudder <em>throughout the flare</em> — do not relax the sideslip.</li>
+            <li>Touchdown: <strong>upwind main wheel first</strong>, then downwind main, then nose wheel. Call <em>"UPWIND WHEEL."</em></li>
+            <li>At and after touchdown: increase into-wind aileron progressively as speed reduces (less aerodynamic effect at slower speed).</li>
+            <li>Ground roll: maintain directional control with rudder / nosewheel. Braking: even application.</li>
+            <li>Vacate runway clear, then complete after-landing checks.</li>
+          </ol>
+        </div>
+
+        <div class="content-block">
+          <h4>Go-Around — Decision Points</h4>
+          <ul>
+            <li>Not stabilised by 300 ft AGL → immediate go-around. Do not attempt to "save" the approach.</li>
+            <li>Drift at flare → go-around</li>
+            <li>Not aligned with runway at touchdown height → go-around</li>
+            <li>Go-around: full power, carb heat COLD, positive climb attitude, flaps to 10° (then retract progressively above Vfe), call ATC</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h4>Instructor Technique Notes</h4>
+          <ul>
+            <li>Demonstrate first circuit with commentary on crab angle and sideslip inputs</li>
+            <li>Student takes control from base turn on second circuit — FI monitors approach from 500 ft</li>
+            <li>Cover the ASI briefly on later circuits to reinforce attitude flying on final</li>
+            <li>Typical intervention point: student releases sideslip in the flare — coach "hold the bank"</li>
+            <li>Progress: introduce gusts once basic technique is consistent — brief gust-correction technique</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h4>SOP References</h4>
+          <div class="ref-row">
+            <span class="sop-ref">CAPA SOP §3.5 — Crosswind</span>
+            <span class="sop-ref">CAPA SOP §3.6 — Go-Around</span>
+            <span class="sop-ref">ATP INT. DGH 06</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════ SECTION 04: CHECK ═══════════════════ -->
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title-block">
+      <h2>CHECK</h2>
+      <p>ASSESSMENT · DEBRIEF · STANDARDS · PROGRESSION</p>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="content-block" style="margin-bottom:20px">
+      <h4>Lesson Standard — Pass / Progress Criteria</h4>
+      <p>The student correctly calculates the crosswind component, performs a stabilised final approach at 75 KIAS on centreline and glidepath, transitions to the wing-low technique at 300 ft, maintains runway heading and centreline throughout the flare, achieves touchdown on the upwind wheel with no drift, and applies into-wind aileron during the ground roll. Go-around is initiated promptly and correctly when the approach is not stabilised. Final check is completed on every approach.</p>
+    </div>
+
+    <div class="check-grid">
+      <div class="check-item">
+        <div class="check-label">ATIS &amp; XWC Calc</div>
+        <p>Crosswind component calculated from ATIS. Within PA28 limits confirmed. Gust additive applied to Vapp if required. Flap setting appropriate for conditions.</p>
+        <div class="cb"></div>
+      </div>
+      <div class="check-item">
+        <div class="check-label">Stabilised Approach</div>
+        <p>"STABLE" called or go-around initiated at 300 ft. Speed within +10/–0 kt of Vapp. PAPI: no more than 3 red. Centreline maintained.</p>
+        <div class="cb"></div>
+      </div>
+      <div class="check-item">
+        <div class="check-label">Final Check</div>
+        <p>Final check completed and called out correctly on every approach. No items omitted under workload. Carb heat actioned correctly.</p>
+        <div class="cb"></div>
+      </div>
+      <div class="check-item">
+        <div class="check-label">Wing-Low Technique</div>
+        <p>Into-wind aileron applied at 300 ft. Opposite rudder maintains runway heading. Ball displaced into-wind (correct). Sideslip maintained to touchdown without releasing.</p>
+        <div class="cb"></div>
+      </div>
+      <div class="check-item">
+        <div class="check-label">Touchdown Quality</div>
+        <p>Upwind wheel first. No lateral drift at touchdown. On centreline. Runway heading maintained at touchdown. Into-wind aileron increased on roll-out.</p>
+        <div class="cb"></div>
+      </div>
+      <div class="check-item">
+        <div class="check-label">Go-Around Decision</div>
+        <p>Go-around initiated promptly and without hesitation when approach is not stabilised. Full procedure correct: power, attitude, config, carb heat COLD, ATC call.</p>
+        <div class="cb"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px">
+    <div class="two-col">
+      <div class="content-block">
+        <h4>Debrief Points — Typical Issues</h4>
+        <ul>
+          <li>Drift at touchdown: sideslip released too early in flare — brief "hold the bank until the wheels are on"</li>
+          <li>Ball centred in sideslip: student coordinating instead of slipping — re-brief independent use of aileron and rudder</li>
+          <li>Late go-around: student committed to bad approach — re-emphasise 300 ft decision gate, no exceptions</li>
+          <li>Carb heat left ON during go-around (ATP INT. DGH 06): brief the full go-around flow immediately</li>
+          <li>Wrong direction sideslip: student slipped downwind — re-brief "aileron INTO the wind, upwind wing down"</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h4>Progression &amp; Next Lesson</h4>
+        <ul>
+          <li>If technique consistent → solo crosswind circuits (check CAPA XWC limit for solo)</li>
+          <li>Progress to gusty crosswind conditions — brief gust-additive technique</li>
+          <li>Link to short-field crosswind landing once standard approach is mastered</li>
+          <li>Reinforce go-around habit: every lesson, every approach — the decision is always available</li>
+        </ul>
+        <div class="ref-row" style="margin-top:12px">
+          <span class="sop-ref">CAPA SOP §3.5–3.6</span>
+          <span class="sop-ref">ATP INT. DGH 06</span>
+          <span class="sop-ref">EGAST GA1 — Collision Avoidance</span>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <div>CAPA · P-MENTOR · VFR · EASA PPL</div>
+    <div><span>CROSSWIND LANDING</span> &nbsp;·&nbsp; FI BRIEFING PACKAGE</div>
+    <div>SOP Ed.2 Rev.1 · APR 2026</div>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
