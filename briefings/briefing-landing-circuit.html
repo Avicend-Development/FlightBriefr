@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIF 01/02 — Instrument Flying: Cross Scan — CAPA Briefing Package</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flight Briefing · Landing Circuit · Center Air CAPA</title>
+  <style>
 :root {
   --navy:        #0D1B2A;
   --navy-mid:    #1A2E45;
@@ -51,7 +49,7 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
 .cover-sop-badge{font-family:var(--font-mono);font-size:9px;color:var(--sky-light);letter-spacing:0.06em;}
 .cover-divider{height:1px;background:rgba(255,255,255,0.12);margin-bottom:12px;}
 .cover-lesson-type{font-family:var(--font-mono);font-size:10px;color:var(--amber);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;}
-.cover-lesson-title{font-family:var(--font-display);font-size:28px;font-weight:800;line-height:1.05;color:var(--white);text-transform:uppercase;letter-spacing:0.02em;margin-bottom:3px;}
+.cover-lesson-title{font-family:var(--font-display);font-size:30px;font-weight:800;line-height:1.05;color:var(--white);text-transform:uppercase;letter-spacing:0.02em;margin-bottom:3px;}
 .cover-lesson-subtitle{font-size:12px;color:var(--grey-300);margin-bottom:12px;}
 .cover-meta-row{display:flex;gap:8px;flex-wrap:wrap;}
 .meta-chip{font-family:var(--font-mono);font-size:9.5px;padding:4px 10px;border-radius:20px;letter-spacing:0.04em;font-weight:500;}
@@ -158,17 +156,10 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
 .instr-note-label{font-family:var(--font-mono);font-size:8.5px;color:#7A5A00;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;}
 .instr-note-text{font-size:10px;color:#5A4400;line-height:1.45;}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-/* Basic-T diagram */
-.basic-t{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:6px;background:var(--navy);border-radius:var(--radius);padding:10px;margin-bottom:8px;}
-.t-instr{background:var(--navy-mid);border:1px solid var(--navy-light);border-radius:4px;padding:6px 8px;text-align:center;}
-.t-instr.primary{border:2px solid var(--amber);background:var(--navy-light);}
-.t-instr-name{font-family:var(--font-mono);font-size:8px;color:var(--grey-300);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;}
-.t-instr-role{font-family:var(--font-display);font-size:10px;font-weight:700;color:var(--amber);text-transform:uppercase;}
-.t-instr.secondary .t-instr-role{color:var(--sky-light);}
-.t-label{grid-column:1/-1;text-align:center;font-family:var(--font-mono);font-size:8px;color:var(--grey-500);letter-spacing:0.06em;padding-top:2px;}
 .debrief-list{display:flex;flex-direction:column;gap:4px;}
 .debrief-item{display:flex;align-items:flex-start;gap:8px;font-size:10.5px;color:var(--grey-700);line-height:1.45;}
 .debrief-item .debrief-num{font-family:var(--font-mono);font-size:9px;background:#7B4FBF;color:var(--white);width:18px;height:18px;border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.callout-tag{font-family:var(--font-mono);font-size:9.5px;background:rgba(58,143,200,0.15);color:var(--sky);border:1px solid rgba(58,143,200,0.3);padding:2px 8px;border-radius:3px;display:inline-block;margin:2px 0;}
 .no-break{page-break-inside:avoid;break-inside:avoid;}
 .spacer{height:8px;}.spacer-sm{height:4px;}
 @media print {
@@ -183,16 +174,22 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
   .page{box-shadow:0 4px 24px rgba(0,0,0,0.20);border-radius:2px;margin:12mm auto;}
 }
 /* APA7 References */
-.apa-references{border-top:2px solid var(--grey-200,#E8ECF0);padding-top:8px;margin-top:10px;}
-.apa-ref-heading{font-family:var(--font-display,'Barlow Condensed',sans-serif);font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy,#0D1B2A);margin-bottom:6px;}
+.apa-references{border-top:2px solid var(--grey-200);padding-top:8px;margin-top:10px;}
+.apa-ref-heading{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
 .apa-ref-list{display:flex;flex-direction:column;gap:4px;}
-.apa-ref-entry{font-size:9px;color:var(--grey-700,#4A5568);line-height:1.5;padding-left:18px;text-indent:-18px;font-family:var(--font-body,'Inter',sans-serif);}
-</style>
+.apa-ref-entry{font-size:9px;color:var(--grey-700);line-height:1.5;padding-left:18px;text-indent:-18px;font-family:var(--font-body);}
+  </style>
 </head>
 <body>
 
-<!-- PAGE 1 — OVERVIEW -->
+<!-- PAGE 1 — COVER & OVERVIEW -->
 <div class="page">
+  <div class="page-header">
+    <span class="org-name">Center Air · CAPA</span>
+    <span class="lesson-id-tag">DGH 06 · Landing Circuit</span>
+    <span class="page-num">Page 1</span>
+  </div>
+
   <div class="cover-header">
     <div class="cover-org-line">
       <div class="cover-logo-block">
@@ -207,15 +204,15 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
       </div>
     </div>
     <div class="cover-divider"></div>
-    <div class="cover-lesson-type">Flight Training Briefing Package · DIF 01/02</div>
-    <div class="cover-lesson-title">Instrument Flying: Cross Scan</div>
-    <div class="cover-lesson-subtitle">Basic-T panel · AI as primary reference · cross-check cycle · trim discipline · unusual attitude recognition</div>
+    <div class="cover-lesson-type">Flight Training Briefing Package · Circuit & Landing</div>
+    <div class="cover-lesson-title">Landing Circuit</div>
+    <div class="cover-lesson-subtitle">Normal landing · power-off approach · circuit procedure · roundout · flare</div>
     <div class="cover-meta-row">
-      <span class="meta-chip aircraft">P-Mentor · Tecnam P2002</span>
-      <span class="meta-chip stage">Stage: DIF 01/02</span>
-      <span class="meta-chip env">Simulated IMC</span>
-      <span class="meta-chip env">Under Hood / Foggles</span>
-      <span class="meta-chip env">Briefing: 10 min</span>
+      <span class="meta-chip aircraft">Tecnam P-Mentor · P2002-JF Sierra</span>
+      <span class="meta-chip stage">Circuit Training</span>
+      <span class="meta-chip env">VFR · Day</span>
+      <span class="meta-chip env">Controlled or Uncontrolled Aerodrome</span>
+      <span class="meta-chip env">Briefing: 20 min</span>
     </div>
   </div>
 
@@ -232,7 +229,7 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         <div class="ov-card-body">
           <div class="duration-grid">
             <div class="dur-item">
-              <div class="dur-value">10</div>
+              <div class="dur-value">20</div>
               <div class="dur-unit">MIN</div>
               <div class="dur-label">Briefing</div>
             </div>
@@ -242,12 +239,12 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
               <div class="dur-label">Flight</div>
             </div>
             <div class="dur-item">
-              <div class="dur-value">10</div>
+              <div class="dur-value">20</div>
               <div class="dur-unit">MIN</div>
               <div class="dur-label">Debrief</div>
             </div>
           </div>
-          <div class="dur-condition">VMC required for safety pilot. Student under foggles/view-limiting device. FI acts as safety pilot — continuous external scan maintained.</div>
+          <div class="dur-condition">VFR day conditions, wind less than 15 kt, controlled or uncontrolled aerodrome. Minimum 1000 ft circuit altitude. Visibility 5 km or better.</div>
         </div>
       </div>
       <!-- PREREQUISITES -->
@@ -260,11 +257,12 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         </div>
         <div class="ov-card-body">
           <ul class="brief-list">
-            <li>Completed DGH 01–03 — capable of S&amp;L flight and basic aircraft control</li>
-            <li>Knows the instrument panel layout: AI, ALT, VSI, HI, ASI, TC/ball locations</li>
-            <li>Understands the Basic-T concept — can identify primary and supporting instruments</li>
-            <li>Has practised S&amp;L with external visual reference — ready to transition to instruments only</li>
-            <li>Reviewed CAPA SOP §2.2 instrument flying procedures prior to briefing</li>
+            <li>Mastered straight and level flight — altitude hold ±50 ft, heading ±10°</li>
+            <li>Completed turns up to 30° bank confidently, coordinated flight demonstrated</li>
+            <li>Climb and level off procedures: understands climb attitudes, power settings, trim</li>
+            <li>Radio communications competent — able to transmit/receive ATC and blind calls</li>
+            <li>Familiar with SOP §1.17 standard circuit procedures, terminology, leg definitions</li>
+            <li>Understands flap usage: positions 0, 1, 2 and associated speed changes</li>
           </ul>
         </div>
       </div>
@@ -281,12 +279,13 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         </div>
         <div class="ov-card-body">
           <ul class="brief-list">
-            <li>Identify the Basic-T panel and the role of each instrument in the cross-scan</li>
-            <li>Demonstrate the AI-centred cross-scan cycle: AI → ALT → HI → VSI → AI</li>
-            <li>Maintain S&amp;L flight under foggles within initial tolerance (Alt ±200 ft, HDG ±20°)</li>
-            <li>Apply trim to reduce control pressure before scanning — "trim first, then scan"</li>
-            <li>Perform gentle turns and level-offs using instrument references only</li>
-            <li>Recognise and recover from a simple unusual attitude introduced by FI</li>
+            <li>Fly a consistent standard circuit at 1000 ft AAL, maintaining circuit shape</li>
+            <li>Maintain correct speed at each leg: 90 kt downwind, 70 kt final</li>
+            <li>Perform a normal landing to smooth touchdown with mains-first contact</li>
+            <li>Understand and demonstrate a power-off approach from downwind abeam position</li>
+            <li>Execute a go-around on command or if approach unstabilised below 200 ft</li>
+            <li>Manage flap selections and power transitions smoothly on approach and landing</li>
+            <li>Maintain centreline control and awareness of aim point throughout descent</li>
           </ul>
         </div>
       </div>
@@ -301,28 +300,28 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         <div class="ov-card-body">
           <div class="tol-grid">
             <div class="tol-tile">
-              <div class="tol-value">±200 ft</div>
-              <div class="tol-param">Altitude</div>
+              <div class="tol-value">1000 ft ±100</div>
+              <div class="tol-param">Circuit Altitude</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">±20°</div>
-              <div class="tol-param">Heading</div>
+              <div class="tol-value">90 kt</div>
+              <div class="tol-param">Downwind Speed</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">±10 kt</div>
-              <div class="tol-param">IAS</div>
+              <div class="tol-value">70 kt</div>
+              <div class="tol-param">Final Approach</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">±100 ft</div>
-              <div class="tol-param">Alt (Progressed)</div>
+              <div class="tol-value">63 kt</div>
+              <div class="tol-param">Threshold Speed</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">±10°</div>
-              <div class="tol-param">HDG (Progressed)</div>
+              <div class="tol-value">150–200 m</div>
+              <div class="tol-param">Aim Point</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">&lt;5 sec</div>
-              <div class="tol-param">Max off AI</div>
+              <div class="tol-value">&lt; 200 ft</div>
+              <div class="tol-param">Go-Around Limit</div>
             </div>
           </div>
         </div>
@@ -339,7 +338,7 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
           <span class="ov-card-label">05 · Motivation</span>
         </div>
         <div class="ov-card-body">
-          <p class="prose">Inadvertent flight into IMC (instrument meteorological conditions) is one of the leading causes of fatal general aviation accidents. A VFR pilot who enters cloud without instrument flying skills typically loses control within 3 minutes. The cross-scan taught in this lesson is the exact same technique used in airline operations — it is not a "backup skill," it is the foundation of all precision flying. Even pilots who never intend to fly IFR must have sufficient instrument skills to recover from unexpected IMC exposure.</p>
+          <p class="prose">The landing circuit is the first true test of your ability to manage an aircraft in a multi-phase sequence. Unlike straight climbs or level turns, the circuit demands continuous control input, speed management, and navigation while descending towards a fixed point. Mastering a stable, properly-shaped circuit is the foundation for safe landing technique. Students who fly sloppy circuits often develop poor landing habits: high and fast approaches lead to ballooning, late flare, and hard touchdowns. A disciplined approach to circuit discipline builds the muscle memory and scan patterns essential for safe operations at any aerodrome.</p>
         </div>
       </div>
       <!-- COMMON MISTAKES -->
@@ -352,13 +351,13 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         </div>
         <div class="ov-card-body">
           <ul class="brief-list mistakes">
-            <li>Fixating on one instrument — usually the altimeter — while attitude drifts on AI</li>
-            <li>Not trimming — fighting continuous control pressure prevents effective scan</li>
-            <li>Moving eyes too fast — reading instruments requires a brief dwell (1–2 sec each)</li>
-            <li>Over-correcting altitude deviations with pitch — large inputs cause oscillations</li>
-            <li>Ignoring VSI — failing to catch a developing climb or descent early</li>
-            <li>Losing heading discipline — applying bank without checking AI first</li>
-            <li>Spatial disorientation: trusting body senses over the AI when they conflict</li>
+            <li>High and fast on final — airspeed not reduced to target, causing long float on landing</li>
+            <li>Late flap selection — holding flap 1 until base turn, forcing rushed transitions</li>
+            <li>Ballooning in the roundout — pulling back too hard or not managing power smoothly</li>
+            <li>Power not fully off in flare — aircraft sinks with residual power, hard touchdown</li>
+            <li>Not recognising unstabilised approach — continuing descent below 200 ft when criteria not met</li>
+            <li>Poor circuit shape — crosswind leg drifting downwind, widening turns late in circuit</li>
+            <li>Aim point drift — not monitoring position relative to threshold, landing long or short</li>
           </ul>
         </div>
       </div>
@@ -370,34 +369,29 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         <div class="ov-card-icon">
           <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><rect x="3" y="1.5" width="10" height="13" rx="1.5" stroke="white" stroke-width="1.5"/><path d="M6 5H10M6 7.5H10M6 10H9" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
-        <span class="ov-card-label">07 · FI References</span>
+        <span class="ov-card-label">07 · Flight Instructor References</span>
       </div>
-      <div class="ov-card-body" style="padding:7px 12px;">
+      <div class="ov-card-body">
         <div class="ref-list">
           <div class="ref-row">
             <span class="ref-tag sop">SOP</span>
-            <span class="ref-text">CAPA SOP E2R1 — Instrument Flying Procedures</span>
-            <span class="ref-section">§ 2.2</span>
+            <span class="ref-text">E2R1 §1.17 — Standard Circuit Procedures & Positioning</span>
+            <span class="ref-section">§1.17</span>
           </div>
           <div class="ref-row">
             <span class="ref-tag sop">SOP</span>
-            <span class="ref-text">CAPA SOP E2R1 — Unusual Attitude Recovery</span>
-            <span class="ref-section">§ 2.3</span>
+            <span class="ref-text">E2R1 §1.19 — Normal Landing Technique</span>
+            <span class="ref-section">§1.19</span>
           </div>
           <div class="ref-row">
-            <span class="ref-tag lesson">LESSON</span>
-            <span class="ref-text">ATP INT. Lesson Prep — DIF 01 Basic Instrument Flying</span>
-            <span class="ref-section">DIF 01</span>
-          </div>
-          <div class="ref-row">
-            <span class="ref-tag lesson">LESSON</span>
-            <span class="ref-text">ATP INT. Lesson Prep — DIF 02 Instrument Cross-Scan</span>
-            <span class="ref-section">DIF 02</span>
+            <span class="ref-tag sop">SOP</span>
+            <span class="ref-text">E2R1 §1.20 — Go-Around Procedure & Decision Criteria</span>
+            <span class="ref-section">§1.20</span>
           </div>
           <div class="ref-row">
             <span class="ref-tag manual">MANUAL</span>
-            <span class="ref-text">Instrument Flying Handbook — Basic Attitude Instrument Flying</span>
-            <span class="ref-section">FAA-H-8083-15</span>
+            <span class="ref-text">P2002-JF POH — Landing distance, flap settings, approach speeds</span>
+            <span class="ref-section">Section 5</span>
           </div>
         </div>
       </div>
@@ -405,282 +399,306 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
   </div>
 
   <div class="page-footer">
-    <span class="footer-left">Center Air · CAPA · SOP E2R1</span>
-    <span class="footer-mid">DIF 01/02 — INSTRUMENT FLYING: CROSS SCAN</span>
-    <span class="footer-right">Page 1 · OVERVIEW</span>
+    <span>Flight Briefing Package</span>
+    <span class="footer-mid">Landing Circuit · DGH 06</span>
+    <span>Tecnam P2002-JF Sierra</span>
   </div>
 </div>
 
-
-<!-- PAGE 2 — SECTIONS 01–04: ENVIRONMENT, SETUP, EXECUTION, CHECK -->
+<!-- PAGE 2 — CIRCUIT PROCEDURE & TECHNIQUE -->
 <div class="page">
   <div class="page-header">
     <span class="org-name">Center Air · CAPA</span>
-    <span class="lesson-id-tag">DIF 01/02 · INSTRUMENT CROSS SCAN</span>
+    <span class="lesson-id-tag">DGH 06 · Landing Circuit</span>
     <span class="page-num">Page 2</span>
   </div>
-  <div class="page-body">
 
-    <div class="section-banner" data-num="01">
-      <div class="section-num">01</div>
+  <div class="page-body" style="gap:9px;">
+    <!-- SECTION 1 — STANDARD CIRCUIT -->
+    <div class="section-banner no-break" data-num="1">
+      <div class="section-num">1</div>
       <div class="section-text">
-        <div class="section-title">Environment</div>
-        <div class="section-subtitle">Basic-T panel · instrument roles · AI primacy · scan theory</div>
-      </div>
-    </div>
-
-    <div class="content-block block-theory no-break">
-      <div class="block-header">
-        <span class="block-type-pill">Theory</span>
-        <span class="block-title">The Basic-T Panel — Instrument Roles</span>
-      </div>
-      <div class="block-body">
-        <!-- Basic T diagram -->
-        <div class="basic-t">
-          <div class="t-instr secondary">
-            <div class="t-instr-name">Airspeed Indicator</div>
-            <div class="t-instr-role">ASI</div>
-          </div>
-          <div class="t-instr primary">
-            <div class="t-instr-name">Attitude Indicator</div>
-            <div class="t-instr-role">AI — PRIMARY</div>
-          </div>
-          <div class="t-instr secondary">
-            <div class="t-instr-name">Altimeter</div>
-            <div class="t-instr-role">ALT</div>
-          </div>
-          <div class="t-instr secondary" style="grid-column:1;">
-            <div class="t-instr-name">Turn Coordinator</div>
-            <div class="t-instr-role">TC / Ball</div>
-          </div>
-          <div class="t-instr secondary">
-            <div class="t-instr-name">Heading Indicator</div>
-            <div class="t-instr-role">HI</div>
-          </div>
-          <div class="t-instr secondary">
-            <div class="t-instr-name">VSI</div>
-            <div class="t-instr-role">Vert. Speed</div>
-          </div>
-          <div class="t-label">BASIC-T · AI at centre-top is the only instrument showing ATTITUDE directly</div>
-        </div>
-        <div class="two-col">
-          <div>
-            <div class="phase-label">▸ AI — Primary Attitude Reference</div>
-            <ul class="brief-list">
-              <li>AI shows pitch and bank simultaneously — the only instrument that does both</li>
-              <li>Receives approximately 90% of scan attention in IMC</li>
-              <li>All corrections start with the AI — set attitude, then confirm with supporting instruments</li>
-              <li>Never leave the AI for more than 5 seconds in IMC</li>
-            </ul>
-          </div>
-          <div>
-            <div class="phase-label">▸ Supporting Instruments</div>
-            <ul class="brief-list">
-              <li><strong>ALT:</strong> confirms altitude — lags AI by 3–5 sec. Check after AI settled.</li>
-              <li><strong>HI:</strong> confirms heading — cross-check after wings level.</li>
-              <li><strong>VSI:</strong> leading indicator of altitude trend — catch deviations early.</li>
-              <li><strong>ASI:</strong> confirms pitch indirectly — IAS rising = nose down, falling = nose up.</li>
-              <li><strong>Ball:</strong> coordination — centred at all times.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-banner" data-num="02" style="margin-top:4px;">
-      <div class="section-num">02</div>
-      <div class="section-text">
-        <div class="section-title">Setup</div>
-        <div class="section-subtitle">Pre-foggles check · trim · entry configuration · scan pattern briefing</div>
-      </div>
-    </div>
-
-    <div class="content-block block-manoeuvre no-break">
-      <div class="block-header">
-        <span class="block-type-pill">Procedure</span>
-        <span class="block-title">Entry Setup &amp; Scan Pattern Introduction</span>
-      </div>
-      <div class="block-body">
-        <div class="key-principle">
-          <div class="key-principle-label">Key Principle</div>
-          <div class="key-principle-text">Trim before foggles. The aircraft must be in trim and stable before the student puts on the view-limiting device — an out-of-trim aircraft will drift immediately and the student will be chasing it from the start. Confirm: wings level, altitude stable, correct power set.</div>
-        </div>
-        <div class="two-col">
-          <div>
-            <div class="phase-label">▸ Pre-Foggles Setup</div>
-            <ol class="procedure-list">
-              <li>Establish S&amp;L at cruise altitude — 2250 RPM, 90 KIAS.</li>
-              <li>Trim aircraft: release yoke pressure completely — aircraft should maintain attitude hands-off for 5+ seconds.</li>
-              <li>Brief student on scan cycle: "AI → ALT → HI → VSI → back to AI. Spend at least 1–2 seconds per instrument. AI is home base."</li>
-              <li>FI brief: "I will monitor outside. You fly on instruments only. Tell me what you see on each instrument as you scan."</li>
-              <li>Student dons foggles. FI confirms outside clear — commence exercise.</li>
-            </ol>
-          </div>
-          <div>
-            <div class="phase-label">▸ The Cross-Scan Cycle</div>
-            <ol class="procedure-list" start="6">
-              <li><strong>AI:</strong> Check wings level, pitch attitude. Any correction needed? Apply small input.</li>
-              <li><strong>ALT:</strong> On target? Note trend. If off: return to AI and adjust pitch by 1–2° only.</li>
-              <li><strong>HI:</strong> On heading? If off: return to AI, apply bank max 10–15°, then roll level on HI.</li>
-              <li><strong>VSI:</strong> Zero for level? If climbing or descending: note rate, return to AI to correct.</li>
-              <li><strong>AI:</strong> Return — always. This is home base. Repeat cycle every 5–8 seconds.</li>
-            </ol>
-          </div>
-        </div>
-        <div class="sop-strip">
-          <span class="sop-badge">SOP</span>
-          <span class="sop-text">Trim continuously — as speed or power changes, retrim before resuming the scan</span>
-          <span class="sop-section">§ 2.2</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <div class="page-footer">
-    <span class="footer-left">Center Air · CAPA · SOP E2R1</span>
-    <span class="footer-mid">DIF 01/02 — INSTRUMENT FLYING: CROSS SCAN</span>
-    <span class="footer-right">Page 2 · ENVIRONMENT &amp; SETUP</span>
-  </div>
-</div>
-
-
-<!-- PAGE 3 — SECTIONS 03 + 04: EXECUTION & CHECK -->
-<div class="page">
-  <div class="page-header">
-    <span class="org-name">Center Air · CAPA</span>
-    <span class="lesson-id-tag">DIF 01/02 · INSTRUMENT CROSS SCAN</span>
-    <span class="page-num">Page 3</span>
-  </div>
-  <div class="page-body">
-
-    <div class="section-banner" data-num="03">
-      <div class="section-num">03</div>
-      <div class="section-text">
-        <div class="section-title">Execution</div>
-        <div class="section-subtitle">S&amp;L under foggles · instrument turns · unusual attitude recovery · common errors</div>
-      </div>
-    </div>
-
-    <div class="content-block block-manoeuvre no-break">
-      <div class="block-header">
-        <span class="block-type-pill">Procedure</span>
-        <span class="block-title">Instrument Manoeuvres (SOP §2.2)</span>
-      </div>
-      <div class="block-body">
-        <div class="two-col">
-          <div>
-            <div class="phase-label">▸ Straight &amp; Level (Instrument)</div>
-            <ol class="procedure-list">
-              <li>Set attitude on AI — wings level, pitch dot on horizon bar.</li>
-              <li>Begin scan: AI → ALT → HI → VSI → AI. Verbalise each reading aloud.</li>
-              <li>If altitude deviates: return to AI first. Adjust pitch by 1–2° only. Confirm on ALT after 5 sec.</li>
-              <li>If heading deviates: AI bank to max 15°. Level when HI shows desired heading −10° (lead). Roll level on AI.</li>
-              <li>Retrim whenever continuous control pressure felt — trim before returning to full scan.</li>
-            </ol>
-          </div>
-          <div>
-            <div class="phase-label">▸ Instrument Turns (Gentle)</div>
-            <ol class="procedure-list" start="6">
-              <li>Set bank on AI — target 15° bank. Increase back pressure slightly as bank increases.</li>
-              <li>Monitor HI for heading progress. Apply lead: at 10–15° before target heading, begin rollout.</li>
-              <li>Roll level on AI — confirm wings level with AI horizon bar.</li>
-              <li>Check ALT after roll-out — adjust pitch if needed. Ball centred throughout.</li>
-            </ol>
-          </div>
-        </div>
-        <div class="warn-strip">
-          <span class="warn-icon">⛔</span>
-          <div>
-            <div class="warn-title">Unusual Attitude Recovery</div>
-            <div class="warn-text">If FI introduces unusual attitude (nose-high or nose-low, banked): <strong>Wings level first on AI</strong> — regardless of nose position. Then pitch: nose-high = lower pitch; nose-low = raise pitch. Do NOT pull back while still banked — this tightens the spiral and increases G. Level wings, THEN pitch.</div>
-          </div>
-        </div>
-        <div class="instr-note">
-          <div class="instr-note-label">FI Note</div>
-          <div class="instr-note-text">Introduce unusual attitudes gently at first — 30° bank, 10° pitch deviation. Ensure the student verbally identifies the AI reading before recovering. Coach: "What does the AI tell you? Level the wings first." Do NOT allow the student to recover by feel alone — the whole lesson is about replacing body senses with instrument reading.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-banner" data-num="04" style="margin-top:4px;">
-      <div class="section-num">04</div>
-      <div class="section-text">
-        <div class="section-title">Check</div>
-        <div class="section-subtitle">Assessment standards · debrief questions · knowledge check · progression</div>
+        <div class="section-title">Standard Circuit</div>
+        <div class="section-subtitle">Procedure from initial climb to final approach alignment</div>
       </div>
     </div>
 
     <div class="content-block block-sop no-break">
       <div class="block-header">
-        <span class="block-type-pill">Standards</span>
-        <span class="block-title">Performance Standards &amp; Debrief (SOP §2.2)</span>
+        <span class="block-type-pill">SOP PROCEDURE</span>
+        <span class="block-title">Circuit Execution</span>
       </div>
       <div class="block-body">
-        <div class="two-col">
-          <div>
-            <div class="phase-label">▸ Minimum Acceptable Performance</div>
-            <ul class="brief-list checks">
-              <li>Maintains Alt ±200 ft and HDG ±20° in S&amp;L under foggles</li>
-              <li>Demonstrates continuous scan — not fixating on single instrument</li>
-              <li>Returns to AI within 5 seconds after each supporting instrument check</li>
-              <li>Trims before full scan — no continuous pressure fighting</li>
-              <li>Recovers unusual attitude: wings level first, then pitch — no all-back-pressure recovery</li>
-              <li>Names all 5 instruments in the Basic-T and their primary roles</li>
-            </ul>
-          </div>
-          <div>
-            <div class="phase-label">▸ Progression Decision</div>
-            <ul class="brief-list">
-              <li>Consolidation (repeat): fixates on single instrument, loses 300+ ft in S&amp;L, recovers unusual attitude by feel, refuses to trust AI over body senses</li>
-              <li>Progress (continue): tolerances met, scan pattern established, unusual attitude recovery safe within 2 demonstrations</li>
-            </ul>
-            <div class="spacer-sm"></div>
-            <div class="phase-label">▸ Key Debrief Questions</div>
-            <div class="debrief-list">
-              <div class="debrief-item">
-                <div class="debrief-num">1</div>
-                <span>Which instrument did you spend the most time on? Was that the right choice?</span>
-              </div>
-              <div class="debrief-item">
-                <div class="debrief-num">2</div>
-                <span>In the unusual attitude — what was your first instinct? Did you follow the AI or your body sense?</span>
-              </div>
-              <div class="debrief-item">
-                <div class="debrief-num">3</div>
-                <span>When did you feel the need to trim? How often did you trim overall?</span>
-              </div>
-            </div>
-          </div>
+        <ul class="procedure-list">
+          <div class="phase-label">UPWIND / INITIAL CLIMB</div>
+          <li>Rotate at 53 KIAS, establish positive rate of climb</li>
+          <li>Retract flap at 56 kt — DO NOT retract above this speed (risk of sink)</li>
+          <li>Climb at 70 kt (VY best climb speed) — MCP 2250 RPM</li>
+          <li>Turn crosswind at circuit height minus 200 ft, or at field boundary (whichever first)</li>
+
+          <div class="phase-label">CROSSWIND</div>
+          <li>Turn smoothly to crosswind heading, maintaining positive ROC</li>
+          <li>Continue climb to 1000 ft AAL — aim to level off by halfway across crosswind leg</li>
+          <li>Level off at 1000 ft — transition to 90 kt cruise configuration</li>
+          <li>Set MAP 22–23" for cruise descent on downwind</li>
+          <li>BUMFICH check abeam airfield: carb heat, fuel pump, mixture, flap trim, ignition, controls, harness</li>
+
+          <div class="phase-label">DOWNWIND</div>
+          <li>Maintain 90 kt, MAP 22–23", 1000 ft AAL — steady descent not required yet</li>
+          <li>Report "downwind" on radio (controlled) or blind call (uncontrolled)</li>
+          <li>Abeam runway threshold: reduce MAP to 12", select Flap 1, begin smooth deceleration to 70 kt</li>
+          <li>Descent commences: aim for gentle descent ~500 ft/min, maintain circuit altitude until base turn</li>
+
+          <div class="phase-label">BASE</div>
+          <li>Turn base when approximately 45° past runway threshold (adjust for wind)</li>
+          <li>Select Flap 2 on base turn — DO NOT make large MAP changes on base</li>
+          <li>Maintain 70 kt, adjust MAP to maintain steady 500 ft/min descent to intercept final</li>
+          <li>Aim to intercept final glidepath at approximately 600 ft AAL</li>
+
+          <div class="phase-label">FINAL APPROACH</div>
+          <li>Call "final" once runway in sight, aircraft aligned, approach stabilising</li>
+          <li>Stable approach criteria: 70 kt, Flap 2, descent ~500 ft/min, aligned within 10° heading</li>
+          <li>Aim point: 150–200 m down runway from threshold — monitor drift continuously</li>
+          <li>Reduce power smoothly as entering ground effect (~500 ft AAL) — DO NOT go fully idle until flare</li>
+
+          <div class="phase-label">ROUNDOUT & FLARE</div>
+          <li>At 20 ft: begin roundout — raise nose progressively, allow descent to slow</li>
+          <li>At 5 ft: close throttle fully — hold attitude, resist pull pressure as aircraft sinks</li>
+          <li>Touchdown: main wheels first — slight tail-low attitude is correct</li>
+          <li>After touchdown: apply brakes gently, maintain centreline with rudder and nosewheel steering</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <!-- SECTION 2 — NORMAL LANDING TECHNIQUE -->
+    <div class="section-banner no-break" data-num="2">
+      <div class="section-num">2</div>
+      <div class="section-text">
+        <div class="section-title">Normal Landing Technique</div>
+        <div class="section-subtitle">Rounding out, flare, and managing the descent</div>
+      </div>
+    </div>
+
+    <div class="content-block block-manoeuvre no-break">
+      <div class="block-header">
+        <span class="block-type-pill">TECHNIQUE</span>
+        <span class="block-title">Landing Approach & Touchdown</span>
+      </div>
+      <div class="block-body">
+        <div class="key-principle">
+          <div class="key-principle-label">GOLDEN RULE</div>
+          <div class="key-principle-text">Stable approach = constant speed, constant angle, aligned. If any element is wrong, GO AROUND.</div>
         </div>
+
+        <p class="prose"><strong>Roundout:</strong> The roundout is a progressive increase in pitch attitude that slows the descent rate as you approach the runway. Apply back pressure smoothly — never abruptly. Your descent should reduce from ~500 ft/min to ~100 ft/min by 5 ft AGL. The horizon line should rise steadily; watch the runway move down the windscreen rather than fixating on a point.</p>
+
+        <p class="prose"><strong>Flare:</strong> As the aircraft reaches ~5 ft, begin to hold the attitude you've established rather than pulling more. The aircraft will settle towards the runway as airspeed decreases. Resist the urge to "keep pulling" — this often causes ballooning (see below). Allow gravity to work; your job is to manage the rate of descent with pitch attitude and, if needed, small power adjustments.</p>
+
+        <p class="prose"><strong>Ballooning:</strong> If the aircraft suddenly rises unexpectedly in the flare, DO NOT push the nose down (risk of hard landing). Instead: add a small amount of power (slight throttle advance), then gently ease back to your landing attitude. This allows you to regain descent without forcing the aircraft down.</p>
+
+        <div class="instr-note">
+          <div class="instr-note-label">Instructor Note</div>
+          <div class="instr-note-text">If in doubt about any approach — go around. A go-around is ALWAYS the right decision. Attempting to salvage a poor approach below 200 ft risks loss of control and hard landing.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Flight Briefing Package</span>
+    <span class="footer-mid">Landing Circuit · DGH 06</span>
+    <span>Tecnam P2002-JF Sierra</span>
+  </div>
+</div>
+
+<!-- PAGE 3 — POWER-OFF APPROACH & GO-AROUND -->
+<div class="page">
+  <div class="page-header">
+    <span class="org-name">Center Air · CAPA</span>
+    <span class="lesson-id-tag">DGH 06 · Landing Circuit</span>
+    <span class="page-num">Page 3</span>
+  </div>
+
+  <div class="page-body" style="gap:9px;">
+    <!-- SECTION 3 — POWER-OFF APPROACH -->
+    <div class="section-banner no-break" data-num="3">
+      <div class="section-num">3</div>
+      <div class="section-text">
+        <div class="section-title">Power-Off Approach</div>
+        <div class="section-subtitle">Simulated engine failure and glide management from downwind</div>
+      </div>
+    </div>
+
+    <div class="content-block block-theory no-break">
+      <div class="block-header">
+        <span class="block-type-pill">THEORY</span>
+        <span class="block-title">Power-Off Approach Concept</span>
+      </div>
+      <div class="block-body">
+        <p class="prose">A power-off approach simulates an engine failure in circuit, forcing you to manage descent and glide without power. The procedure starts when you're downwind abeam the runway threshold at 1000 ft AAL. On command from the instructor (or as a continuous exercise), you will close the throttle to idle, establish best glide speed (70 kt — the same as your normal approach speed), and manage flaps carefully to avoid undershooting or overshooting the runway.</p>
+
+        <p class="prose"><strong>Best Glide:</strong> The P2002 best glide speed is 70 kt — conveniently the same as your normal approach speed. This simplifies your workload. At idle, your descent rate will be approximately 500–600 ft/min, which is slightly steeper than a normal descent but very manageable if you plan ahead.</p>
+
+        <p class="prose"><strong>Flap Management:</strong> Flaps act as airbrakes in a power-off descent. You have no engine power to trade for lift, so flap usage is critical. If you're low on the glide path and at risk of undershooting, REDUCE flap (e.g., from Flap 2 to Flap 1) to decrease descent rate. If you're high and overshooting, INCREASE flap slowly to increase descent. If you misjudge badly and cannot reach the runway, you have one more tool: the forward slip (covered separately).</p>
+
+        <p class="prose"><strong>Aim Point:</strong> Aim to land in the first third of the runway — approximately 400–600 m from threshold. This gives you margin if you're slightly high on the glide path.</p>
+
+        <p class="prose"><strong>Circuit Modification:</strong> Depending on your starting altitude and wind, you may need to tighten your circuit (smaller turns, steeper descent). Discuss the planned modifications with the instructor before entering downwind.</p>
+
+        <div class="sop-strip">
+          <span class="sop-badge">SOP</span>
+          <span class="sop-text">E2R1 §1.20 — GO-AROUND criteria: unstabilised below 200 ft; runway not clear; crosswind exceeds limits; aircraft not configured.</span>
+          <span class="sop-section">§1.20</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <!-- SECTION 4 — GO-AROUND TECHNIQUE -->
+    <div class="section-banner no-break" data-num="4">
+      <div class="section-num">4</div>
+      <div class="section-text">
+        <div class="section-title">Go-Around Procedure</div>
+        <div class="section-subtitle">Abort approach and climb away safely</div>
       </div>
     </div>
 
     <div class="content-block block-check no-break">
       <div class="block-header">
-        <span class="block-type-pill">Review</span>
-        <span class="block-title">End-of-Lesson Knowledge Check</span>
+        <span class="block-type-pill">PROCEDURE</span>
+        <span class="block-title">Go-Around Execution</span>
       </div>
       <div class="block-body">
-        <div class="two-col">
-          <div>
-            <ul class="brief-list">
-              <li>What is the Basic-T and which instrument is at its centre?</li>
-              <li>Why must you return to the AI after every other instrument check?</li>
-              <li>What does the VSI tell you that the altimeter does not?</li>
-              <li>What is the maximum time to spend off the AI in IMC?</li>
-            </ul>
-          </div>
-          <div>
-            <ul class="brief-list">
-              <li>Describe the correct unusual attitude recovery sequence.</li>
-              <li>What does an increasing airspeed tell you about pitch attitude?</li>
-              <li>Why must the aircraft be trimmed before starting the cross-scan?</li>
-              <li>What causes spatial disorientation and how do you counter it?</li>
-            </ul>
+        <ul class="procedure-list">
+          <li><strong>POWER:</strong> Apply full power — MCP 2250 RPM — smoothly but promptly. (Not a jab; smooth and firm.)</li>
+          <li><strong>ATTITUDE:</strong> Establish climb attitude (approximately 10–12° nose-up). Target airspeed 56 kt minimum (VY safe).</li>
+          <li><strong>FLAP:</strong> Retract flap immediately: Flap 2 → Flap 1 (when positive ROC is established), then Flap 1 → Clean (at 70 kt airspeed).</li>
+          <li><strong>CLIMB:</strong> Establish 70 kt climb, maintain runway centreline (do not turn until positive ROC confirmed).</li>
+          <li><strong>COMMUNICATE:</strong> Call "Going around" — blind call or contact ATC if on frequency.</li>
+          <li>Once positive ROC confirmed and safe altitude gained (minimum 300 ft AAL), continue with downwind leg spacing to re-enter circuit.</li>
+        </ul>
+
+        <div class="warn-strip">
+          <div class="warn-icon">!</div>
+          <div style="flex:1;">
+            <div class="warn-title">CRITICAL — Go-Around Rules</div>
+            <div class="warn-text">Never attempt to land after the aim point has been missed at low altitude. If the runway remaining is insufficient to land safely after the numbers, a go-around is mandatory. A safe go-around beats a crash landing every time.</div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Flight Briefing Package</span>
+    <span class="footer-mid">Landing Circuit · DGH 06</span>
+    <span>Tecnam P2002-JF Sierra</span>
+  </div>
+</div>
+
+<!-- PAGE 4 — DEBRIEF CRITERIA -->
+<div class="page">
+  <div class="page-header">
+    <span class="org-name">Center Air · CAPA</span>
+    <span class="lesson-id-tag">DGH 06 · Landing Circuit</span>
+    <span class="page-num">Page 4</span>
+  </div>
+
+  <div class="page-body" style="gap:9px;">
+    <!-- SECTION 5 — DEBRIEF CRITERIA -->
+    <div class="section-banner no-break" data-num="5">
+      <div class="section-num">5</div>
+      <div class="section-text">
+        <div class="section-title">Debrief & Assessment</div>
+        <div class="section-subtitle">Key criteria to review after flight</div>
+      </div>
+    </div>
+
+    <div class="content-block block-debrief no-break">
+      <div class="block-header">
+        <span class="block-type-pill">DEBRIEF</span>
+        <span class="block-title">Post-Flight Review Checklist</span>
+      </div>
+      <div class="block-body">
+        <div class="debrief-list">
+          <div class="debrief-item">
+            <div class="debrief-num">1</div>
+            <div>
+              <strong>Circuit Shape:</strong> Was each leg at the correct altitude and position? Was the circuit symmetrical, or did you drift downwind on crosswind? Were turns coordinated and at appropriate rates?
+            </div>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">2</div>
+            <div>
+              <strong>Speed Control:</strong> Did you achieve and maintain 90 kt on downwind, 70 kt on final? Did you reach 63 kt by threshold? Were power and flap changes smooth?
+            </div>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">3</div>
+            <div>
+              <strong>Approach Stability:</strong> By 200 ft AAL, was the approach stable (speed, descent, alignment)? If not, did you recognise it early and go around, or continue and attempt a salvage?
+            </div>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">4</div>
+            <div>
+              <strong>Roundout Height & Quality:</strong> Did you begin the roundout at approximately 20 ft? Was it progressive and smooth, or abrupt and jerky? Did the descent rate reduce smoothly?
+            </div>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">5</div>
+            <div>
+              <strong>Touchdown Quality:</strong> Did the main wheels touch down first (correct), or was the landing flat three-point? Was the landing smooth or hard? Did you maintain centreline?
+            </div>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">6</div>
+            <div>
+              <strong>Power-Off Approach (if practised):</strong> Did you manage the glide path correctly? Was your descent rate appropriate? Did you use flap changes correctly to adjust descent? Did you land in the target zone?
+            </div>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">7</div>
+            <div>
+              <strong>Go-Around (if practised):</strong> Was power applied promptly and smoothly? Did you transition to climb attitude correctly? Was flap retraction timed appropriately?
+            </div>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">8</div>
+            <div>
+              <strong>Debrief Separation:</strong> Normal approach and power-off approach should be debriefed separately, with clear discussion of what worked and what needs improvement in each scenario.
+            </div>
+          </div>
+        </div>
+
+        <div class="caution-strip" style="margin-top:12px;">
+          <div class="warn-icon">⚠</div>
+          <div style="flex:1;">
+            <div class="warn-title">Debrief Focus Areas</div>
+            <div class="warn-text">Emphasise consistency over perfection. A slightly high landing with smooth roundout is better than a low, hard landing with good touch-down alignment. Discuss recurring errors and patterns — if you consistently land long, examine why (high and fast entry, late flare management, etc.) rather than treating each landing as isolated.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer-sm"></div>
+
+    <!-- NOTES FOR NEXT LESSON -->
+    <div class="content-block block-technique no-break">
+      <div class="block-header">
+        <span class="block-type-pill">NEXT STEPS</span>
+        <span class="block-title">Progression & Consolidation</span>
+      </div>
+      <div class="block-body">
+        <p class="prose">Once you have completed a minimum of 3 consistent circuits and demonstrated a normal landing within tolerances, the next lesson will introduce crosswind landings and wind correction during approach and landing. If you struggled with any of today's circuits, consolidate the current lesson with a second flight focused on circuit repetition before moving forward.</p>
+
+        <p class="prose">Key areas for independent study before the next flight: review radio phraseology for circuit calls, study the wind correction principle (crab angle), and practise visual estimation of descent rate (aim for gentle, steady descent, not steep dives or level-offs).</p>
+      </div>
+    </div>
+  </div>
 
     <div class="apa-references no-break">
       <div class="apa-ref-heading">References</div>
@@ -688,14 +706,14 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         <div class="apa-ref-entry">Center Air APS. (2025, November). <em>CAPA standard operating procedure</em> (Ed. 2, Rev. 1). Center Air APS.</div>
         <div class="apa-ref-entry">ATP International. (2020). <em>ATP integrated airline training programme — lesson preparation</em> [Student notes]. Center Air Pilot Academy.</div>
         <div class="apa-ref-entry">Costruzioni Aeronautiche TECNAM S.p.A. (2024, October). <em>P-Mentor aircraft flight manual</em> (Doc. No. 2002/1032, Ed. 1, Rev. 10). Costruzioni Aeronautiche TECNAM S.p.A.</div>
-        <div class="apa-ref-entry">Garmin Ltd. (2024). <em>GI 275 electronic flight instrument pilot's guide</em>. Garmin Ltd.</div>
+        <div class="apa-ref-entry">European Aviation Safety Agency. (n.d.). <em>Safety promotion leaflet GA1: Collision avoidance</em> (EGAST GA1). EASA.</div>
       </div>
     </div>
-  </div>
+
   <div class="page-footer">
-    <span class="footer-left">Center Air · CAPA · SOP E2R1</span>
-    <span class="footer-mid">DIF 01/02 — INSTRUMENT FLYING: CROSS SCAN</span>
-    <span class="footer-right">Page 3 · EXECUTION &amp; CHECK</span>
+    <span>Flight Briefing Package</span>
+    <span class="footer-mid">Landing Circuit · DGH 06</span>
+    <span>Tecnam P2002-JF Sierra</span>
   </div>
 </div>
 

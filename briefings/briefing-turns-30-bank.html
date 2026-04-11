@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIF 01/02 — Instrument Flying: Cross Scan — CAPA Briefing Package</title>
+<title>DGH — Turns 30° Bank — CAPA Briefing Package</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -51,7 +51,7 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
 .cover-sop-badge{font-family:var(--font-mono);font-size:9px;color:var(--sky-light);letter-spacing:0.06em;}
 .cover-divider{height:1px;background:rgba(255,255,255,0.12);margin-bottom:12px;}
 .cover-lesson-type{font-family:var(--font-mono);font-size:10px;color:var(--amber);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;}
-.cover-lesson-title{font-family:var(--font-display);font-size:28px;font-weight:800;line-height:1.05;color:var(--white);text-transform:uppercase;letter-spacing:0.02em;margin-bottom:3px;}
+.cover-lesson-title{font-family:var(--font-display);font-size:30px;font-weight:800;line-height:1.05;color:var(--white);text-transform:uppercase;letter-spacing:0.02em;margin-bottom:3px;}
 .cover-lesson-subtitle{font-size:12px;color:var(--grey-300);margin-bottom:12px;}
 .cover-meta-row{display:flex;gap:8px;flex-wrap:wrap;}
 .meta-chip{font-family:var(--font-mono);font-size:9.5px;padding:4px 10px;border-radius:20px;letter-spacing:0.04em;font-weight:500;}
@@ -158,17 +158,10 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
 .instr-note-label{font-family:var(--font-mono);font-size:8.5px;color:#7A5A00;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;}
 .instr-note-text{font-size:10px;color:#5A4400;line-height:1.45;}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-/* Basic-T diagram */
-.basic-t{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:6px;background:var(--navy);border-radius:var(--radius);padding:10px;margin-bottom:8px;}
-.t-instr{background:var(--navy-mid);border:1px solid var(--navy-light);border-radius:4px;padding:6px 8px;text-align:center;}
-.t-instr.primary{border:2px solid var(--amber);background:var(--navy-light);}
-.t-instr-name{font-family:var(--font-mono);font-size:8px;color:var(--grey-300);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;}
-.t-instr-role{font-family:var(--font-display);font-size:10px;font-weight:700;color:var(--amber);text-transform:uppercase;}
-.t-instr.secondary .t-instr-role{color:var(--sky-light);}
-.t-label{grid-column:1/-1;text-align:center;font-family:var(--font-mono);font-size:8px;color:var(--grey-500);letter-spacing:0.06em;padding-top:2px;}
 .debrief-list{display:flex;flex-direction:column;gap:4px;}
 .debrief-item{display:flex;align-items:flex-start;gap:8px;font-size:10.5px;color:var(--grey-700);line-height:1.45;}
 .debrief-item .debrief-num{font-family:var(--font-mono);font-size:9px;background:#7B4FBF;color:var(--white);width:18px;height:18px;border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.callout-tag{font-family:var(--font-mono);font-size:9.5px;background:rgba(58,143,200,0.15);color:var(--sky);border:1px solid rgba(58,143,200,0.3);padding:2px 8px;border-radius:3px;display:inline-block;margin:2px 0;}
 .no-break{page-break-inside:avoid;break-inside:avoid;}
 .spacer{height:8px;}.spacer-sm{height:4px;}
 @media print {
@@ -183,10 +176,10 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
   .page{box-shadow:0 4px 24px rgba(0,0,0,0.20);border-radius:2px;margin:12mm auto;}
 }
 /* APA7 References */
-.apa-references{border-top:2px solid var(--grey-200,#E8ECF0);padding-top:8px;margin-top:10px;}
-.apa-ref-heading{font-family:var(--font-display,'Barlow Condensed',sans-serif);font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy,#0D1B2A);margin-bottom:6px;}
+.apa-references{border-top:2px solid var(--grey-200);padding-top:8px;margin-top:10px;}
+.apa-ref-heading{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
 .apa-ref-list{display:flex;flex-direction:column;gap:4px;}
-.apa-ref-entry{font-size:9px;color:var(--grey-700,#4A5568);line-height:1.5;padding-left:18px;text-indent:-18px;font-family:var(--font-body,'Inter',sans-serif);}
+.apa-ref-entry{font-size:9px;color:var(--grey-700);line-height:1.5;padding-left:18px;text-indent:-18px;font-family:var(--font-body);}
 </style>
 </head>
 <body>
@@ -207,14 +200,14 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
       </div>
     </div>
     <div class="cover-divider"></div>
-    <div class="cover-lesson-type">Flight Training Briefing Package · DIF 01/02</div>
-    <div class="cover-lesson-title">Instrument Flying: Cross Scan</div>
-    <div class="cover-lesson-subtitle">Basic-T panel · AI as primary reference · cross-check cycle · trim discipline · unusual attitude recognition</div>
+    <div class="cover-lesson-type">Flight Training Briefing Package · Medium Turns</div>
+    <div class="cover-lesson-title">Turns 30° Bank</div>
+    <div class="cover-lesson-subtitle">Medium turns · coordination · lead point · roll-in/roll-out technique</div>
     <div class="cover-meta-row">
-      <span class="meta-chip aircraft">P-Mentor · Tecnam P2002</span>
-      <span class="meta-chip stage">Stage: DIF 01/02</span>
-      <span class="meta-chip env">Simulated IMC</span>
-      <span class="meta-chip env">Under Hood / Foggles</span>
+      <span class="meta-chip aircraft">Tecnam P-Mentor · P2002-JF Sierra</span>
+      <span class="meta-chip stage">Stage: Medium Turns</span>
+      <span class="meta-chip env">VFR · Day</span>
+      <span class="meta-chip env">Local Area</span>
       <span class="meta-chip env">Briefing: 10 min</span>
     </div>
   </div>
@@ -247,7 +240,7 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
               <div class="dur-label">Debrief</div>
             </div>
           </div>
-          <div class="dur-condition">VMC required for safety pilot. Student under foggles/view-limiting device. FI acts as safety pilot — continuous external scan maintained.</div>
+          <div class="dur-condition">Practice area — clear of cloud and controlled airspace. Minimum 2000 ft AGL for initial exercises. Light turbulence or less.</div>
         </div>
       </div>
       <!-- PREREQUISITES -->
@@ -260,11 +253,11 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         </div>
         <div class="ov-card-body">
           <ul class="brief-list">
-            <li>Completed DGH 01–03 — capable of S&amp;L flight and basic aircraft control</li>
-            <li>Knows the instrument panel layout: AI, ALT, VSI, HI, ASI, TC/ball locations</li>
-            <li>Understands the Basic-T concept — can identify primary and supporting instruments</li>
-            <li>Has practised S&amp;L with external visual reference — ready to transition to instruments only</li>
-            <li>Reviewed CAPA SOP §2.2 instrument flying procedures prior to briefing</li>
+            <li>Completed straight and level flight — can maintain altitude ±100 ft</li>
+            <li>Knows primary and secondary effects of controls</li>
+            <li>Understands coordination — ball centred principle</li>
+            <li>Can recognise and correct skid/slip using rudder</li>
+            <li>Reviewed CAPA SOP §1.22 medium turn procedures prior to briefing</li>
           </ul>
         </div>
       </div>
@@ -281,12 +274,12 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         </div>
         <div class="ov-card-body">
           <ul class="brief-list">
-            <li>Identify the Basic-T panel and the role of each instrument in the cross-scan</li>
-            <li>Demonstrate the AI-centred cross-scan cycle: AI → ALT → HI → VSI → AI</li>
-            <li>Maintain S&amp;L flight under foggles within initial tolerance (Alt ±200 ft, HDG ±20°)</li>
-            <li>Apply trim to reduce control pressure before scanning — "trim first, then scan"</li>
-            <li>Perform gentle turns and level-offs using instrument references only</li>
-            <li>Recognise and recover from a simple unusual attitude introduced by FI</li>
+            <li>Enter and maintain a 30° banked turn with coordinated controls</li>
+            <li>Maintain altitude ±100 ft throughout the turn</li>
+            <li>Roll out on a pre-selected heading ±10° using lead point technique</li>
+            <li>Keep ball centred throughout — demonstrate coordination</li>
+            <li>Perform both left and right turns with equal proficiency</li>
+            <li>Recognize over-banking tendency and control it with opposite aileron</li>
           </ul>
         </div>
       </div>
@@ -301,28 +294,28 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         <div class="ov-card-body">
           <div class="tol-grid">
             <div class="tol-tile">
-              <div class="tol-value">±200 ft</div>
-              <div class="tol-param">Altitude</div>
+              <div class="tol-value">30°±5°</div>
+              <div class="tol-param">Bank Angle</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">±20°</div>
-              <div class="tol-param">Heading</div>
+              <div class="tol-value">±100 ft</div>
+              <div class="tol-param">Altitude</div>
             </div>
             <div class="tol-tile">
               <div class="tol-value">±10 kt</div>
               <div class="tol-param">IAS</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">±100 ft</div>
-              <div class="tol-param">Alt (Progressed)</div>
+              <div class="tol-value">10–15°</div>
+              <div class="tol-param">Lead Point</div>
             </div>
             <div class="tol-tile">
               <div class="tol-value">±10°</div>
-              <div class="tol-param">HDG (Progressed)</div>
+              <div class="tol-param">Exit HDG</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">&lt;5 sec</div>
-              <div class="tol-param">Max off AI</div>
+              <div class="tol-value">Ball</div>
+              <div class="tol-param">Centred</div>
             </div>
           </div>
         </div>
@@ -339,7 +332,7 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
           <span class="ov-card-label">05 · Motivation</span>
         </div>
         <div class="ov-card-body">
-          <p class="prose">Inadvertent flight into IMC (instrument meteorological conditions) is one of the leading causes of fatal general aviation accidents. A VFR pilot who enters cloud without instrument flying skills typically loses control within 3 minutes. The cross-scan taught in this lesson is the exact same technique used in airline operations — it is not a "backup skill," it is the foundation of all precision flying. Even pilots who never intend to fly IFR must have sufficient instrument skills to recover from unexpected IMC exposure.</p>
+          <p class="prose">The 30° medium turn is the foundation of practical flying. At 30° bank, load factor rises slightly to 1.15 g, yet stall speed increases only by 7% — remaining well within the safety margins of normal flight. This lesson teaches precise control, smooth coordination, and the discipline of using lead points for accurate roll-out. Students who master medium turns develop the muscle memory and scan habits needed for all subsequent advanced manoeuvres.</p>
         </div>
       </div>
       <!-- COMMON MISTAKES -->
@@ -352,13 +345,13 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         </div>
         <div class="ov-card-body">
           <ul class="brief-list mistakes">
-            <li>Fixating on one instrument — usually the altimeter — while attitude drifts on AI</li>
-            <li>Not trimming — fighting continuous control pressure prevents effective scan</li>
-            <li>Moving eyes too fast — reading instruments requires a brief dwell (1–2 sec each)</li>
-            <li>Over-correcting altitude deviations with pitch — large inputs cause oscillations</li>
-            <li>Ignoring VSI — failing to catch a developing climb or descent early</li>
-            <li>Losing heading discipline — applying bank without checking AI first</li>
-            <li>Spatial disorientation: trusting body senses over the AI when they conflict</li>
+            <li>Ball not centred — insufficient rudder during roll-in or roll-out</li>
+            <li>Altitude loss — not applying back pressure as bank increases</li>
+            <li>Rolling out too late or too early — missing lead point by more than 10°</li>
+            <li>Fixating on bank angle — forgetting to scan altitude and airspeed</li>
+            <li>Uncoordinated entry — using rudder to correct bank angle instead of aileron</li>
+            <li>Over-banking tendency ignored — allowing bank to exceed 35°</li>
+            <li>No external reference — relying only on instruments instead of horizon</li>
           </ul>
         </div>
       </div>
@@ -376,28 +369,28 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         <div class="ref-list">
           <div class="ref-row">
             <span class="ref-tag sop">SOP</span>
-            <span class="ref-text">CAPA SOP E2R1 — Instrument Flying Procedures</span>
-            <span class="ref-section">§ 2.2</span>
+            <span class="ref-text">CAPA SOP E2R1 — Medium Turns 30° Procedure</span>
+            <span class="ref-section">§ 1.22</span>
           </div>
           <div class="ref-row">
             <span class="ref-tag sop">SOP</span>
-            <span class="ref-text">CAPA SOP E2R1 — Unusual Attitude Recovery</span>
-            <span class="ref-section">§ 2.3</span>
-          </div>
-          <div class="ref-row">
-            <span class="ref-tag lesson">LESSON</span>
-            <span class="ref-text">ATP INT. Lesson Prep — DIF 01 Basic Instrument Flying</span>
-            <span class="ref-section">DIF 01</span>
-          </div>
-          <div class="ref-row">
-            <span class="ref-tag lesson">LESSON</span>
-            <span class="ref-text">ATP INT. Lesson Prep — DIF 02 Instrument Cross-Scan</span>
-            <span class="ref-section">DIF 02</span>
+            <span class="ref-text">CAPA SOP E2R1 — Effects of Controls &amp; Coordination</span>
+            <span class="ref-section">§ 1.3</span>
           </div>
           <div class="ref-row">
             <span class="ref-tag manual">MANUAL</span>
-            <span class="ref-text">Instrument Flying Handbook — Basic Attitude Instrument Flying</span>
-            <span class="ref-section">FAA-H-8083-15</span>
+            <span class="ref-text">The Flight Instructor's Manual — Medium Turns &amp; Coordination</span>
+            <span class="ref-section">Kershner</span>
+          </div>
+          <div class="ref-row">
+            <span class="ref-tag manual">MANUAL</span>
+            <span class="ref-text">Tecnam P2002 Sierra POH — Normal Manoeuvres</span>
+            <span class="ref-section">POH §5</span>
+          </div>
+          <div class="ref-row">
+            <span class="ref-tag lesson">LESSON</span>
+            <span class="ref-text">ATP INT. Lesson Prep — Medium Turns Student Notes</span>
+            <span class="ref-section">Medium Turns</span>
           </div>
         </div>
       </div>
@@ -406,17 +399,17 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
 
   <div class="page-footer">
     <span class="footer-left">Center Air · CAPA · SOP E2R1</span>
-    <span class="footer-mid">DIF 01/02 — INSTRUMENT FLYING: CROSS SCAN</span>
+    <span class="footer-mid">TURNS 30° BANK — MEDIUM TURNS</span>
     <span class="footer-right">Page 1 · OVERVIEW</span>
   </div>
 </div>
 
 
-<!-- PAGE 2 — SECTIONS 01–04: ENVIRONMENT, SETUP, EXECUTION, CHECK -->
+<!-- PAGE 2 — THEORY & TECHNIQUE -->
 <div class="page">
   <div class="page-header">
     <span class="org-name">Center Air · CAPA</span>
-    <span class="lesson-id-tag">DIF 01/02 · INSTRUMENT CROSS SCAN</span>
+    <span class="lesson-id-tag">DGH 05 · TURNS 30° BANK</span>
     <span class="page-num">Page 2</span>
   </div>
   <div class="page-body">
@@ -424,64 +417,49 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
     <div class="section-banner" data-num="01">
       <div class="section-num">01</div>
       <div class="section-text">
-        <div class="section-title">Environment</div>
-        <div class="section-subtitle">Basic-T panel · instrument roles · AI primacy · scan theory</div>
+        <div class="section-title">Load Factor &amp; Coordination</div>
+        <div class="section-subtitle">Aerodynamic load · stall speed · control coordination · rudder technique</div>
       </div>
     </div>
 
     <div class="content-block block-theory no-break">
       <div class="block-header">
         <span class="block-type-pill">Theory</span>
-        <span class="block-title">The Basic-T Panel — Instrument Roles</span>
+        <span class="block-title">Load Factor at 30° Bank</span>
       </div>
       <div class="block-body">
-        <!-- Basic T diagram -->
-        <div class="basic-t">
-          <div class="t-instr secondary">
-            <div class="t-instr-name">Airspeed Indicator</div>
-            <div class="t-instr-role">ASI</div>
-          </div>
-          <div class="t-instr primary">
-            <div class="t-instr-name">Attitude Indicator</div>
-            <div class="t-instr-role">AI — PRIMARY</div>
-          </div>
-          <div class="t-instr secondary">
-            <div class="t-instr-name">Altimeter</div>
-            <div class="t-instr-role">ALT</div>
-          </div>
-          <div class="t-instr secondary" style="grid-column:1;">
-            <div class="t-instr-name">Turn Coordinator</div>
-            <div class="t-instr-role">TC / Ball</div>
-          </div>
-          <div class="t-instr secondary">
-            <div class="t-instr-name">Heading Indicator</div>
-            <div class="t-instr-role">HI</div>
-          </div>
-          <div class="t-instr secondary">
-            <div class="t-instr-name">VSI</div>
-            <div class="t-instr-role">Vert. Speed</div>
-          </div>
-          <div class="t-label">BASIC-T · AI at centre-top is the only instrument showing ATTITUDE directly</div>
-        </div>
         <div class="two-col">
           <div>
-            <div class="phase-label">▸ AI — Primary Attitude Reference</div>
+            <div class="phase-label">▸ Load Factor Calculation</div>
             <ul class="brief-list">
-              <li>AI shows pitch and bank simultaneously — the only instrument that does both</li>
-              <li>Receives approximately 90% of scan attention in IMC</li>
-              <li>All corrections start with the AI — set attitude, then confirm with supporting instruments</li>
-              <li>Never leave the AI for more than 5 seconds in IMC</li>
+              <li>Load factor (n) = 1 / cos(bank angle)</li>
+              <li>At 30° bank: n = 1 / cos(30°) = <strong>1.15 g</strong></li>
+              <li>Only a slight increase over level flight (1.0 g)</li>
+              <li>Stall speed increases: VS(turn) = VS(level) × √n</li>
+              <li>At 30° bank: stall speed ≈ VS × 1.07 (approximately 7% increase)</li>
+              <li>P-Mentor VS ≈ 44 KIAS → 30° turn stall speed ≈ 47 KIAS — plenty of safety margin</li>
             </ul>
+            <div class="sop-strip">
+              <span class="sop-badge">SOP</span>
+              <span class="sop-text">At 30° bank, stall speed increases modestly. Maintain normal cruise airspeed throughout.</span>
+              <span class="sop-section">§ 1.22</span>
+            </div>
           </div>
           <div>
-            <div class="phase-label">▸ Supporting Instruments</div>
+            <div class="phase-label">▸ Coordination Principle</div>
             <ul class="brief-list">
-              <li><strong>ALT:</strong> confirms altitude — lags AI by 3–5 sec. Check after AI settled.</li>
-              <li><strong>HI:</strong> confirms heading — cross-check after wings level.</li>
-              <li><strong>VSI:</strong> leading indicator of altitude trend — catch deviations early.</li>
-              <li><strong>ASI:</strong> confirms pitch indirectly — IAS rising = nose down, falling = nose up.</li>
-              <li><strong>Ball:</strong> coordination — centred at all times.</li>
+              <li>Coordination: ball centred at all times — no skid or slip</li>
+              <li>Ball shows rate of turn vs. bank angle — centred = coordinated</li>
+              <li>In left turn: left aileron creates adverse yaw — apply left rudder to coordinate</li>
+              <li>Right turn: right aileron → right rudder required</li>
+              <li>Secondary effect of ailerons: lead with rudder as aileron applied</li>
+              <li>Ball displacement indicates need for more/less rudder — continuous adjustment</li>
             </ul>
+            <div class="sop-strip">
+              <span class="sop-badge">SOP</span>
+              <span class="sop-text">Ball is the primary reference for coordination — keep it centred using rudder as the primary control.</span>
+              <span class="sop-section">§ 1.3</span>
+            </div>
           </div>
         </div>
       </div>
@@ -490,47 +468,30 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
     <div class="section-banner" data-num="02" style="margin-top:4px;">
       <div class="section-num">02</div>
       <div class="section-text">
-        <div class="section-title">Setup</div>
-        <div class="section-subtitle">Pre-foggles check · trim · entry configuration · scan pattern briefing</div>
+        <div class="section-title">Roll-In Technique</div>
+        <div class="section-subtitle">Entry · coordinated aileron &amp; rudder · back pressure · trim</div>
       </div>
     </div>
 
     <div class="content-block block-manoeuvre no-break">
       <div class="block-header">
         <span class="block-type-pill">Procedure</span>
-        <span class="block-title">Entry Setup &amp; Scan Pattern Introduction</span>
+        <span class="block-title">Entering a 30° Coordinated Turn</span>
       </div>
       <div class="block-body">
-        <div class="key-principle">
-          <div class="key-principle-label">Key Principle</div>
-          <div class="key-principle-text">Trim before foggles. The aircraft must be in trim and stable before the student puts on the view-limiting device — an out-of-trim aircraft will drift immediately and the student will be chasing it from the start. Confirm: wings level, altitude stable, correct power set.</div>
-        </div>
-        <div class="two-col">
-          <div>
-            <div class="phase-label">▸ Pre-Foggles Setup</div>
-            <ol class="procedure-list">
-              <li>Establish S&amp;L at cruise altitude — 2250 RPM, 90 KIAS.</li>
-              <li>Trim aircraft: release yoke pressure completely — aircraft should maintain attitude hands-off for 5+ seconds.</li>
-              <li>Brief student on scan cycle: "AI → ALT → HI → VSI → back to AI. Spend at least 1–2 seconds per instrument. AI is home base."</li>
-              <li>FI brief: "I will monitor outside. You fly on instruments only. Tell me what you see on each instrument as you scan."</li>
-              <li>Student dons foggles. FI confirms outside clear — commence exercise.</li>
-            </ol>
-          </div>
-          <div>
-            <div class="phase-label">▸ The Cross-Scan Cycle</div>
-            <ol class="procedure-list" start="6">
-              <li><strong>AI:</strong> Check wings level, pitch attitude. Any correction needed? Apply small input.</li>
-              <li><strong>ALT:</strong> On target? Note trend. If off: return to AI and adjust pitch by 1–2° only.</li>
-              <li><strong>HI:</strong> On heading? If off: return to AI, apply bank max 10–15°, then roll level on HI.</li>
-              <li><strong>VSI:</strong> Zero for level? If climbing or descending: note rate, return to AI to correct.</li>
-              <li><strong>AI:</strong> Return — always. This is home base. Repeat cycle every 5–8 seconds.</li>
-            </ol>
-          </div>
+        <div class="procedure-list">
+          <li>Check CLEAR of traffic — look in the direction of intended turn for a full 360° horizon view</li>
+          <li>Apply coordinated aileron and rudder in direction of turn smoothly</li>
+          <li>As bank reaches 30°, apply slight back pressure on yoke to maintain altitude</li>
+          <li>Bank rate should be smooth — approximately 10–15° per second</li>
+          <li>Once established at 30°, hold bank angle using visual reference (wingtip to horizon)</li>
+          <li>Trim slightly if needed — avoid fighting the controls</li>
+          <li>Scan continuously: AI (bank) → ALT → VSI → Airspeed → Horizon → repeat</li>
         </div>
         <div class="sop-strip">
           <span class="sop-badge">SOP</span>
-          <span class="sop-text">Trim continuously — as speed or power changes, retrim before resuming the scan</span>
-          <span class="sop-section">§ 2.2</span>
+          <span class="sop-text">Smooth entry is essential. Coordinated aileron + rudder + back pressure must work together — not sequentially.</span>
+          <span class="sop-section">§ 1.22</span>
         </div>
       </div>
     </div>
@@ -538,17 +499,17 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
   </div>
   <div class="page-footer">
     <span class="footer-left">Center Air · CAPA · SOP E2R1</span>
-    <span class="footer-mid">DIF 01/02 — INSTRUMENT FLYING: CROSS SCAN</span>
-    <span class="footer-right">Page 2 · ENVIRONMENT &amp; SETUP</span>
+    <span class="footer-mid">TURNS 30° BANK — MEDIUM TURNS</span>
+    <span class="footer-right">Page 2 · THEORY &amp; TECHNIQUE</span>
   </div>
 </div>
 
 
-<!-- PAGE 3 — SECTIONS 03 + 04: EXECUTION & CHECK -->
+<!-- PAGE 3 — MAINTAINING THE TURN, ROLL-OUT, & DEBRIEF -->
 <div class="page">
   <div class="page-header">
     <span class="org-name">Center Air · CAPA</span>
-    <span class="lesson-id-tag">DIF 01/02 · INSTRUMENT CROSS SCAN</span>
+    <span class="lesson-id-tag">DGH 05 · TURNS 30° BANK</span>
     <span class="page-num">Page 3</span>
   </div>
   <div class="page-body">
@@ -556,127 +517,130 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
     <div class="section-banner" data-num="03">
       <div class="section-num">03</div>
       <div class="section-text">
-        <div class="section-title">Execution</div>
-        <div class="section-subtitle">S&amp;L under foggles · instrument turns · unusual attitude recovery · common errors</div>
+        <div class="section-title">Maintaining &amp; Roll-Out</div>
+        <div class="section-subtitle">Sustained turn · lead point · roll-out technique · left vs. right turns</div>
       </div>
     </div>
 
-    <div class="content-block block-manoeuvre no-break">
+    <div class="content-block block-technique no-break">
       <div class="block-header">
-        <span class="block-type-pill">Procedure</span>
-        <span class="block-title">Instrument Manoeuvres (SOP §2.2)</span>
+        <span class="block-type-pill">Technique</span>
+        <span class="block-title">Maintaining a 30° Banked Turn</span>
       </div>
       <div class="block-body">
         <div class="two-col">
           <div>
-            <div class="phase-label">▸ Straight &amp; Level (Instrument)</div>
-            <ol class="procedure-list">
-              <li>Set attitude on AI — wings level, pitch dot on horizon bar.</li>
-              <li>Begin scan: AI → ALT → HI → VSI → AI. Verbalise each reading aloud.</li>
-              <li>If altitude deviates: return to AI first. Adjust pitch by 1–2° only. Confirm on ALT after 5 sec.</li>
-              <li>If heading deviates: AI bank to max 15°. Level when HI shows desired heading −10° (lead). Roll level on AI.</li>
-              <li>Retrim whenever continuous control pressure felt — trim before returning to full scan.</li>
-            </ol>
+            <div class="phase-label">▸ Holding Bank Angle</div>
+            <ul class="brief-list">
+              <li>Primary reference: horizon-to-wingtip relationship (outer wing pointing below horizon)</li>
+              <li>Secondary reference: AI — bank angle indicator must show 30°</li>
+              <li>Back pressure: maintained (not increasing) — trim can assist</li>
+              <li>Visual check: nose traces smooth arc on horizon</li>
+              <li>Instrument cross-check cycle: AI (bank) → ALT → VSI → AI — frequent and rhythmic</li>
+            </ul>
           </div>
           <div>
-            <div class="phase-label">▸ Instrument Turns (Gentle)</div>
-            <ol class="procedure-list" start="6">
-              <li>Set bank on AI — target 15° bank. Increase back pressure slightly as bank increases.</li>
-              <li>Monitor HI for heading progress. Apply lead: at 10–15° before target heading, begin rollout.</li>
-              <li>Roll level on AI — confirm wings level with AI horizon bar.</li>
-              <li>Check ALT after roll-out — adjust pitch if needed. Ball centred throughout.</li>
-            </ol>
+            <div class="phase-label">▸ Monitoring Coordination</div>
+            <ul class="brief-list">
+              <li>Ball: continuously monitored — any skid or slip requires rudder correction</li>
+              <li>Skid (ball moves inside): apply rudder opposite to turn direction</li>
+              <li>Slip (ball moves outside): apply rudder in direction of turn</li>
+              <li>Correction should be small and smooth — not abrupt</li>
+              <li>Airspeed: watch for decay — if IAS drops, reduce back pressure slightly</li>
+            </ul>
           </div>
         </div>
+        <div class="sop-strip">
+          <span class="sop-badge">SOP</span>
+          <span class="sop-text">Scan: horizon → bank angle → altitude → airspeed → ball — repeat continuously. No fixation.</span>
+          <span class="sop-section">§ 1.22</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block block-technique no-break">
+      <div class="block-header">
+        <span class="block-type-pill">Technique</span>
+        <span class="block-title">Roll-Out Using Lead Point</span>
+      </div>
+      <div class="block-body">
+        <div class="procedure-list">
+          <li>Lead point = <strong>half the bank angle</strong> = 15° before desired exit heading</li>
+          <li>Example: turning to North (360°) from South, rolling right — begin roll-out at 015° on heading indicator</li>
+          <li>Apply coordinated aileron and rudder <strong>opposite</strong> to turn direction — smooth and progressive</li>
+          <li>Release back pressure gradually as wings level — do not dump the nose</li>
+          <li>Roll-out rate should mirror roll-in rate — approximately 10–15° per second</li>
+          <li>As wings reach level, reduce power if it was increased, and retrim for level flight</li>
+        </div>
+        <div class="sop-strip">
+          <span class="sop-badge">SOP</span>
+          <span class="sop-text">Roll-out lead equals half the bank angle for medium turns (30°). This is a standard reference — practise until instinctive.</span>
+          <span class="sop-section">§ 1.22</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block block-technique no-break">
+      <div class="block-header">
+        <span class="block-type-pill">Technique</span>
+        <span class="block-title">Left vs. Right Turn Differences</span>
+      </div>
+      <div class="block-body">
+        <ul class="brief-list">
+          <li><strong>ROTAX 912 Torque Effect:</strong> Engine produces slight left-turning tendency at power</li>
+          <li><strong>Right turn:</strong> Adverse yaw effect more pronounced — may require slightly more right rudder on entry than left rudder in left turn</li>
+          <li><strong>Left turn:</strong> P-factor and torque assist the turn — may require less left rudder on entry</li>
+          <li><strong>Both turns:</strong> Ball is the reference — keep it centred regardless of asymmetries</li>
+          <li>In all cases, use ball displacement to adjust rudder — do not attempt to memorise differences</li>
+        </ul>
         <div class="warn-strip">
           <span class="warn-icon">⛔</span>
           <div>
-            <div class="warn-title">Unusual Attitude Recovery</div>
-            <div class="warn-text">If FI introduces unusual attitude (nose-high or nose-low, banked): <strong>Wings level first on AI</strong> — regardless of nose position. Then pitch: nose-high = lower pitch; nose-low = raise pitch. Do NOT pull back while still banked — this tightens the spiral and increases G. Level wings, THEN pitch.</div>
+            <div class="warn-title">Traffic Lookout</div>
+            <div class="warn-text">Before entering any turn, perform clearing turn check in the direction of intended turn. Look left if turning left; look right if turning right. Scan above and below horizon. No exceptions.</div>
           </div>
-        </div>
-        <div class="instr-note">
-          <div class="instr-note-label">FI Note</div>
-          <div class="instr-note-text">Introduce unusual attitudes gently at first — 30° bank, 10° pitch deviation. Ensure the student verbally identifies the AI reading before recovering. Coach: "What does the AI tell you? Level the wings first." Do NOT allow the student to recover by feel alone — the whole lesson is about replacing body senses with instrument reading.</div>
         </div>
       </div>
     </div>
 
-    <div class="section-banner" data-num="04" style="margin-top:4px;">
+    <div class="section-banner" data-num="04">
       <div class="section-num">04</div>
       <div class="section-text">
-        <div class="section-title">Check</div>
-        <div class="section-subtitle">Assessment standards · debrief questions · knowledge check · progression</div>
+        <div class="section-title">Debrief Criteria</div>
+        <div class="section-subtitle">Assessment · progression decision · knowledge questions</div>
       </div>
     </div>
 
-    <div class="content-block block-sop no-break">
+    <div class="content-block block-debrief no-break">
       <div class="block-header">
-        <span class="block-type-pill">Standards</span>
-        <span class="block-title">Performance Standards &amp; Debrief (SOP §2.2)</span>
+        <span class="block-type-pill">Debrief</span>
+        <span class="block-title">Structured Debrief Questions</span>
       </div>
       <div class="block-body">
-        <div class="two-col">
-          <div>
-            <div class="phase-label">▸ Minimum Acceptable Performance</div>
-            <ul class="brief-list checks">
-              <li>Maintains Alt ±200 ft and HDG ±20° in S&amp;L under foggles</li>
-              <li>Demonstrates continuous scan — not fixating on single instrument</li>
-              <li>Returns to AI within 5 seconds after each supporting instrument check</li>
-              <li>Trims before full scan — no continuous pressure fighting</li>
-              <li>Recovers unusual attitude: wings level first, then pitch — no all-back-pressure recovery</li>
-              <li>Names all 5 instruments in the Basic-T and their primary roles</li>
-            </ul>
+        <div class="debrief-list">
+          <div class="debrief-item">
+            <div class="debrief-num">1</div>
+            <span>Was the 30° bank maintained ±5° throughout both turns (left and right)? What technique did you use to hold bank angle?</span>
           </div>
-          <div>
-            <div class="phase-label">▸ Progression Decision</div>
-            <ul class="brief-list">
-              <li>Consolidation (repeat): fixates on single instrument, loses 300+ ft in S&amp;L, recovers unusual attitude by feel, refuses to trust AI over body senses</li>
-              <li>Progress (continue): tolerances met, scan pattern established, unusual attitude recovery safe within 2 demonstrations</li>
-            </ul>
-            <div class="spacer-sm"></div>
-            <div class="phase-label">▸ Key Debrief Questions</div>
-            <div class="debrief-list">
-              <div class="debrief-item">
-                <div class="debrief-num">1</div>
-                <span>Which instrument did you spend the most time on? Was that the right choice?</span>
-              </div>
-              <div class="debrief-item">
-                <div class="debrief-num">2</div>
-                <span>In the unusual attitude — what was your first instinct? Did you follow the AI or your body sense?</span>
-              </div>
-              <div class="debrief-item">
-                <div class="debrief-num">3</div>
-                <span>When did you feel the need to trim? How often did you trim overall?</span>
-              </div>
-            </div>
+          <div class="debrief-item">
+            <div class="debrief-num">2</div>
+            <span>Was the ball centred at all times? If not, what control input did you use to correct skid/slip?</span>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="content-block block-check no-break">
-      <div class="block-header">
-        <span class="block-type-pill">Review</span>
-        <span class="block-title">End-of-Lesson Knowledge Check</span>
-      </div>
-      <div class="block-body">
-        <div class="two-col">
-          <div>
-            <ul class="brief-list">
-              <li>What is the Basic-T and which instrument is at its centre?</li>
-              <li>Why must you return to the AI after every other instrument check?</li>
-              <li>What does the VSI tell you that the altimeter does not?</li>
-              <li>What is the maximum time to spend off the AI in IMC?</li>
-            </ul>
+          <div class="debrief-item">
+            <div class="debrief-num">3</div>
+            <span>Was altitude maintained ±100 ft? If there was altitude loss or gain, what would you adjust?</span>
           </div>
-          <div>
-            <ul class="brief-list">
-              <li>Describe the correct unusual attitude recovery sequence.</li>
-              <li>What does an increasing airspeed tell you about pitch attitude?</li>
-              <li>Why must the aircraft be trimmed before starting the cross-scan?</li>
-              <li>What causes spatial disorientation and how do you counter it?</li>
-            </ul>
+          <div class="debrief-item">
+            <div class="debrief-num">4</div>
+            <span>Did you use the lead point correctly? How many degrees of lead did you apply, and did you exit within ±10° of target heading?</span>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">5</div>
+            <span>Rate your scan discipline: did you fixate on any one instrument, or did you maintain a smooth cross-check throughout?</span>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">6</div>
+            <span>What differences did you notice between the left and right turns? Which felt more coordinated?</span>
           </div>
         </div>
       </div>
@@ -688,14 +652,14 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         <div class="apa-ref-entry">Center Air APS. (2025, November). <em>CAPA standard operating procedure</em> (Ed. 2, Rev. 1). Center Air APS.</div>
         <div class="apa-ref-entry">ATP International. (2020). <em>ATP integrated airline training programme — lesson preparation</em> [Student notes]. Center Air Pilot Academy.</div>
         <div class="apa-ref-entry">Costruzioni Aeronautiche TECNAM S.p.A. (2024, October). <em>P-Mentor aircraft flight manual</em> (Doc. No. 2002/1032, Ed. 1, Rev. 10). Costruzioni Aeronautiche TECNAM S.p.A.</div>
-        <div class="apa-ref-entry">Garmin Ltd. (2024). <em>GI 275 electronic flight instrument pilot's guide</em>. Garmin Ltd.</div>
       </div>
     </div>
+
   </div>
   <div class="page-footer">
     <span class="footer-left">Center Air · CAPA · SOP E2R1</span>
-    <span class="footer-mid">DIF 01/02 — INSTRUMENT FLYING: CROSS SCAN</span>
-    <span class="footer-right">Page 3 · EXECUTION &amp; CHECK</span>
+    <span class="footer-mid">TURNS 30° BANK — MEDIUM TURNS</span>
+    <span class="footer-right">Page 3 · EXECUTION &amp; DEBRIEF</span>
   </div>
 </div>
 

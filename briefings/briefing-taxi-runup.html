@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DGH 11/12 — Use of VOR — CAPA Briefing Package</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi & Run-Up · Center Air CAPA Flight Training</title>
+  <style>
 :root {
   --navy:        #0D1B2A;
   --navy-mid:    #1A2E45;
@@ -162,8 +160,6 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
 .debrief-item{display:flex;align-items:flex-start;gap:8px;font-size:10.5px;color:var(--grey-700);line-height:1.45;}
 .debrief-item .debrief-num{font-family:var(--font-mono);font-size:9px;background:#7B4FBF;color:var(--white);width:18px;height:18px;border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
 .callout-tag{font-family:var(--font-mono);font-size:9.5px;background:rgba(58,143,200,0.15);color:var(--sky);border:1px solid rgba(58,143,200,0.3);padding:2px 8px;border-radius:3px;display:inline-block;margin:2px 0;}
-.vor-diagram{background:var(--navy);border-radius:var(--radius);padding:12px;margin-bottom:8px;}
-.vor-diagram svg{width:100%;height:auto;display:block;}
 .no-break{page-break-inside:avoid;break-inside:avoid;}
 .spacer{height:8px;}.spacer-sm{height:4px;}
 @media print {
@@ -178,16 +174,22 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
   .page{box-shadow:0 4px 24px rgba(0,0,0,0.20);border-radius:2px;margin:12mm auto;}
 }
 /* APA7 References */
-.apa-references{border-top:2px solid var(--grey-200,#E8ECF0);padding-top:8px;margin-top:10px;}
-.apa-ref-heading{font-family:var(--font-display,'Barlow Condensed',sans-serif);font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy,#0D1B2A);margin-bottom:6px;}
+.apa-references{border-top:2px solid var(--grey-200);padding-top:8px;margin-top:10px;}
+.apa-ref-heading{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
 .apa-ref-list{display:flex;flex-direction:column;gap:4px;}
-.apa-ref-entry{font-size:9px;color:var(--grey-700,#4A5568);line-height:1.5;padding-left:18px;text-indent:-18px;font-family:var(--font-body,'Inter',sans-serif);}
-</style>
+.apa-ref-entry{font-size:9px;color:var(--grey-700);line-height:1.5;padding-left:18px;text-indent:-18px;font-family:var(--font-body);}
+  </style>
 </head>
 <body>
 
-<!-- PAGE 1 — OVERVIEW -->
+<!-- PAGE 1 — COVER & OVERVIEW -->
 <div class="page">
+  <div class="page-header">
+    <span class="org-name">Center Air · CAPA</span>
+    <span class="lesson-id-tag">GND 01 · Taxi & Run-Up</span>
+    <span class="page-num">Page 1/3</span>
+  </div>
+
   <div class="cover-header">
     <div class="cover-org-line">
       <div class="cover-logo-block">
@@ -202,15 +204,14 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
       </div>
     </div>
     <div class="cover-divider"></div>
-    <div class="cover-lesson-type">Flight Training Briefing Package · DGH 11/12</div>
-    <div class="cover-lesson-title">Use of VOR</div>
-    <div class="cover-lesson-subtitle">VOR tuning · identification · course interception · tracking · station passage</div>
+    <div class="cover-lesson-type">Flight Training Briefing Package · Ground Operations</div>
+    <div class="cover-lesson-title">Taxi and Run-Up</div>
+    <div class="cover-lesson-subtitle">Ground handling · taxiway procedures · engine run-up · pre-departure checks</div>
     <div class="cover-meta-row">
-      <span class="meta-chip aircraft">P-Mentor · Tecnam P2002</span>
-      <span class="meta-chip stage">Stage: DGH 11/12</span>
-      <span class="meta-chip env">VFR · Day</span>
-      <span class="meta-chip env">Local Area</span>
-      <span class="meta-chip env">Briefing: 20 min</span>
+      <span class="meta-chip aircraft">Tecnam P-Mentor · P2002-JF Sierra</span>
+      <span class="meta-chip aircraft">ROTAX 912 iSc 3 Sport</span>
+      <span class="meta-chip stage">Ground Operations</span>
+      <span class="meta-chip env">Day · Controlled & Uncontrolled</span>
     </div>
   </div>
 
@@ -227,22 +228,22 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         <div class="ov-card-body">
           <div class="duration-grid">
             <div class="dur-item">
-              <div class="dur-value">20</div>
+              <div class="dur-value">10</div>
               <div class="dur-unit">MIN</div>
               <div class="dur-label">Briefing</div>
             </div>
             <div class="dur-item">
               <div class="dur-value">1.0</div>
               <div class="dur-unit">HR</div>
-              <div class="dur-label">Flight</div>
+              <div class="dur-label">Ground + Air</div>
             </div>
             <div class="dur-item">
-              <div class="dur-value">15</div>
+              <div class="dur-value">10</div>
               <div class="dur-unit">MIN</div>
               <div class="dur-label">Debrief</div>
             </div>
           </div>
-          <div class="dur-condition">Local area — VMC required. Student must be able to maintain S&amp;L flight without FI assistance while operating nav equipment.</div>
+          <div class="dur-condition">Ground time 0.5 hrs (taxi, run-up, checks); Flight time 0.5 hrs (local area circuit practice)</div>
         </div>
       </div>
       <!-- PREREQUISITES -->
@@ -251,15 +252,14 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
           <div class="ov-card-icon">
             <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="white" stroke-width="1.5"/><path d="M5 8H11M5 5.5H9M5 10.5H10" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg>
           </div>
-          <span class="ov-card-label">02 · Student Prerequisites</span>
+          <span class="ov-card-label">02 · Prerequisites</span>
         </div>
         <div class="ov-card-body">
           <ul class="brief-list">
-            <li>Completed DGH 01–10 — capable of unsupported S&amp;L flight and basic navigation</li>
-            <li>Understands the Tecnam P-Mentor avionics panel — GNS430 or similar VOR receiver</li>
-            <li>Knows the difference between TO/FROM indication and CDI deflection</li>
-            <li>Can identify a VOR on an aeronautical chart and note its frequency and identifier</li>
-            <li>Reviewed CAPA SOP §1.22.6 radio navigation procedures prior to briefing</li>
+            <li>Completed pre-flight inspection — airframe, engine, controls checked</li>
+            <li>Cockpit familiarisation — location of all switches, instruments, circuit breakers known</li>
+            <li>ATC radio phraseology — understands readback requirements and standard calls</li>
+            <li>Traffic pattern awareness — understands local aerodrome layout</li>
           </ul>
         </div>
       </div>
@@ -272,16 +272,15 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
           <div class="ov-card-icon">
             <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="white" stroke-width="1.5"/><circle cx="8" cy="8" r="3" stroke="white" stroke-width="1.2"/><circle cx="8" cy="8" r="1" fill="white"/></svg>
           </div>
-          <span class="ov-card-label">03 · Lesson Objectives</span>
+          <span class="ov-card-label">03 · Learning Objectives</span>
         </div>
         <div class="ov-card-body">
           <ul class="brief-list">
-            <li>TUNE, SELECT, and IDENT a VOR station correctly using published frequency</li>
-            <li>Determine aircraft position relative to VOR using TO/FROM and radial</li>
-            <li>Intercept a specified VOR radial using the 60° standard intercept angle</li>
-            <li>Track inbound and outbound on a VOR radial with correct wind correction</li>
-            <li>Identify station passage and transition from inbound to outbound tracking</li>
-            <li>Describe lead points for turn-on when intercepting (60°=20°, 30°=10°, 90°=30°)</li>
+            <li>Obtain correct ATC clearance before moving — read back runway, taxiway, hold short instructions</li>
+            <li>Taxi at safe speed with differential braking and appropriate wing attitude for crosswind</li>
+            <li>Conduct engine run-up per CAPA SOP checklist — verify LANE A/B integrity, all systems green</li>
+            <li>Identify defects that prevent flight — take no-go decisions with confidence</li>
+            <li>Complete pre-take-off checks (BUMFICH) correctly before entering runway</li>
           </ul>
         </div>
       </div>
@@ -296,28 +295,28 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         <div class="ov-card-body">
           <div class="tol-grid">
             <div class="tol-tile">
-              <div class="tol-value">±1 dot</div>
-              <div class="tol-param">CDI Track</div>
+              <div class="tol-value">Walk pace</div>
+              <div class="tol-param">Taxi Speed</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">±100 ft</div>
-              <div class="tol-param">Altitude</div>
+              <div class="tol-value">±0.5 m</div>
+              <div class="tol-param">Centreline</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">±10°</div>
-              <div class="tol-param">Heading</div>
+              <div class="tol-value">3000 RPM</div>
+              <div class="tol-param">Run-up RPM</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">60°</div>
-              <div class="tol-param">Intercept Ang.</div>
+              <div class="tol-value">>50°C</div>
+              <div class="tol-param">Oil Temp</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">&lt;5 sec</div>
-              <div class="tol-param">IDENT Check</div>
+              <div class="tol-value"><50 RPM</div>
+              <div class="tol-param">LANE Drop</div>
             </div>
             <div class="tol-tile">
-              <div class="tol-value">±5°</div>
-              <div class="tol-param">WCA Track</div>
+              <div class="tol-value">>1400 RPM</div>
+              <div class="tol-param">Idle RPM</div>
             </div>
           </div>
         </div>
@@ -325,399 +324,308 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
     </div>
 
     <div class="overview-grid">
-      <!-- MOTIVATION -->
-      <div class="ov-card motivation no-break">
-        <div class="ov-card-header">
-          <div class="ov-card-icon">
-            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 6H14L10.5 8.5L12 13L8 10.5L4 13L5.5 8.5L2 6H6.5L8 2Z" stroke="white" stroke-width="1.2" stroke-linejoin="round"/></svg>
-          </div>
-          <span class="ov-card-label">05 · Motivation</span>
-        </div>
-        <div class="ov-card-body">
-          <p class="prose">The VOR remains the most widely available ground-based radio navigation aid in Europe and is a core skill for VFR cross-country and IFR operations alike. While GPS has largely replaced VOR as primary navigation, every professional pilot must be capable of VOR operations as a backup, for procedural approaches, and for airways navigation. The TUNE-SELECT-IDENT discipline instilled in this lesson is the same one used in glass-cockpit airliners. Mastering the discipline early prevents bad habits that are costly to correct later.</p>
-        </div>
-      </div>
       <!-- COMMON MISTAKES -->
       <div class="ov-card mistakes no-break">
         <div class="ov-card-header">
           <div class="ov-card-icon">
-            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="white" stroke-width="1.5"/><path d="M5.5 5.5L10.5 10.5M10.5 5.5L5.5 10.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M2 14L14 2M14 14L2 2" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <span class="ov-card-label">06 · Common Mistakes</span>
+          <span class="ov-card-label">05 · Common Mistakes</span>
         </div>
         <div class="ov-card-body">
           <ul class="brief-list mistakes">
-            <li>Skipping IDENT — using unverified VOR signal (may be maintenance/off-air)</li>
-            <li>Chasing the needle — making continuous small corrections instead of stable WCA</li>
-            <li>Not understanding TO/FROM — misreading position relative to station</li>
-            <li>Flying the wrong OBS setting for the desired course</li>
-            <li>Not applying a lead point on intercept — overshooting the radial</li>
-            <li>Confusing CDI deflection direction when on FROM indication</li>
-            <li>Neglecting aircraft control while head-down on avionics</li>
+            <li>Not checking for traffic on taxiway — always visual scan before entering</li>
+            <li>Taxiing too fast — braking distance insufficient in tight turns</li>
+            <li>Forgetting to set parking brake before applying run-up power</li>
+            <li>Not monitoring oil temperature — power application before >50°C causes engine stress</li>
+            <li>Incomplete BUMFICH — missing items are hidden defects waiting to happen in flight</li>
           </ul>
         </div>
       </div>
-    </div>
-
-    <!-- FI REFERENCES -->
-    <div class="ov-card references no-break">
-      <div class="ov-card-header">
-        <div class="ov-card-icon">
-          <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><rect x="3" y="1.5" width="10" height="13" rx="1.5" stroke="white" stroke-width="1.5"/><path d="M6 5H10M6 7.5H10M6 10H9" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <!-- REFERENCES -->
+      <div class="ov-card references no-break">
+        <div class="ov-card-header">
+          <div class="ov-card-icon">
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M2 2H14V14H2V2Z" stroke="white" stroke-width="1.3"/><path d="M5 6H11M5 9H11M5 12H9" stroke="white" stroke-width="1.1" stroke-linecap="round"/></svg>
+          </div>
+          <span class="ov-card-label">06 · References</span>
         </div>
-        <span class="ov-card-label">07 · FI References</span>
-      </div>
-      <div class="ov-card-body" style="padding:7px 12px;">
-        <div class="ref-list">
-          <div class="ref-row">
-            <span class="ref-tag sop">SOP</span>
-            <span class="ref-text">CAPA SOP E2R1 — Radio Navigation &amp; VOR Procedures</span>
-            <span class="ref-section">§ 1.22.6</span>
-          </div>
-          <div class="ref-row">
-            <span class="ref-tag sop">SOP</span>
-            <span class="ref-text">CAPA SOP E2R1 — Avionics Setup and NAV Selection</span>
-            <span class="ref-section">§ 1.7</span>
-          </div>
-          <div class="ref-row">
-            <span class="ref-tag lesson">LESSON</span>
-            <span class="ref-text">ATP INT. Lesson Prep — DGH 11 VOR Tracking Student Notes</span>
-            <span class="ref-section">DGH 11</span>
-          </div>
-          <div class="ref-row">
-            <span class="ref-tag lesson">LESSON</span>
-            <span class="ref-text">ATP INT. Lesson Prep — DGH 12 VOR Interception Student Notes</span>
-            <span class="ref-section">DGH 12</span>
-          </div>
-          <div class="ref-row">
-            <span class="ref-tag manual">MANUAL</span>
-            <span class="ref-text">Pilot's Handbook of Aeronautical Knowledge — VOR Navigation</span>
-            <span class="ref-section">FAA-H-8083-25</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="page-footer">
-    <span class="footer-left">Center Air · CAPA · SOP E2R1</span>
-    <span class="footer-mid">DGH 11/12 — USE OF VOR</span>
-    <span class="footer-right">Page 1 · OVERVIEW</span>
-  </div>
-</div>
-
-
-<!-- PAGE 2 — SECTIONS 01 + 02: ENVIRONMENT & SETUP -->
-<div class="page">
-  <div class="page-header">
-    <span class="org-name">Center Air · CAPA</span>
-    <span class="lesson-id-tag">DGH 11/12 · USE OF VOR</span>
-    <span class="page-num">Page 2</span>
-  </div>
-  <div class="page-body">
-
-    <div class="section-banner" data-num="01">
-      <div class="section-num">01</div>
-      <div class="section-text">
-        <div class="section-title">Environment</div>
-        <div class="section-subtitle">VOR theory · how it works · signal reliability · service volume</div>
-      </div>
-    </div>
-
-    <div class="content-block block-theory no-break">
-      <div class="block-header">
-        <span class="block-type-pill">Theory</span>
-        <span class="block-title">VOR — How It Works</span>
-      </div>
-      <div class="block-body">
-        <div class="two-col">
-          <div>
-            <div class="phase-label">▸ Principle of Operation</div>
-            <ul class="brief-list">
-              <li>VOR = VHF Omnidirectional Range — operates 108.0–117.95 MHz band</li>
-              <li>Ground station emits two signals: reference (omnidirectional) and variable (rotating). Phase difference between the two defines magnetic bearing from station</li>
-              <li>Aircraft receiver measures phase difference → displays bearing as CDI deflection against OBS-selected course</li>
-              <li>TO/FROM flag: TO = flying toward station on selected course; FROM = flying away from station</li>
-              <li>CDI centred + TO flag = aircraft is on the selected inbound radial</li>
-            </ul>
-            <div class="sop-strip">
-              <span class="sop-badge">SOP</span>
-              <span class="sop-text">Always TUNE → SELECT → IDENT before using any VOR for navigation</span>
-              <span class="sop-section">§ 1.22.6</span>
+        <div class="ov-card-body">
+          <div class="ref-list">
+            <div class="ref-row">
+              <span class="ref-tag sop">SOP</span>
+              <span class="ref-text">CAPA SOP E2R1 §1.4 Pre-Flight & Taxi</span>
+            </div>
+            <div class="ref-row">
+              <span class="ref-tag sop">SOP</span>
+              <span class="ref-text">CAPA SOP E2R1 §1.5 Run-Up & Pre-T/O</span>
+            </div>
+            <div class="ref-row">
+              <span class="ref-tag manual">MANUAL</span>
+              <span class="ref-text">ROTAX 912 iSc Operator Manual</span>
+            </div>
+            <div class="ref-row">
+              <span class="ref-tag manual">AFM</span>
+              <span class="ref-text">Tecnam P2002-JF Normal Procedures</span>
             </div>
           </div>
-          <div>
-            <div class="phase-label">▸ Service Volume &amp; Limitations</div>
-            <ul class="brief-list">
-              <li>T-VOR (Terminal): 25 NM / up to 12,000 ft — for approach use only</li>
-              <li>L-VOR (Low altitude): 40 NM / up to 18,000 ft</li>
-              <li>H-VOR (High altitude): 130 NM / 18,000–45,000 ft</li>
-              <li>Line of sight: signal blocked by terrain — unreliable below 1000 ft AGL near station</li>
-              <li>Cone of silence: directly overhead station (±5° cone) — flag may oscillate/disappear</li>
-              <li>NOTAM check: VOR maintenance causes off-air periods — always check before use</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
-
-    <div class="section-banner" data-num="02" style="margin-top:4px;">
-      <div class="section-num">02</div>
-      <div class="section-text">
-        <div class="section-title">Setup</div>
-        <div class="section-subtitle">TUNE · SELECT · IDENT procedure · OBS setting · position determination</div>
-      </div>
-    </div>
-
-    <div class="content-block block-manoeuvre no-break">
-      <div class="block-header">
-        <span class="block-type-pill">Procedure</span>
-        <span class="block-title">VOR Tune, Select, Ident &amp; Position Determination</span>
-      </div>
-      <div class="block-body">
-        <div class="key-principle">
-          <div class="key-principle-label">Key Principle</div>
-          <div class="key-principle-text">TUNE → SELECT → IDENT is a mandatory sequence — never use a VOR without confirming the Morse code ident. An unidentified VOR may be on maintenance, off-air, or transmitting a false signal.</div>
-        </div>
-        <div class="two-col">
-          <div>
-            <div class="phase-label">▸ TUNE — SELECT — IDENT</div>
-            <ol class="procedure-list">
-              <li><strong>TUNE:</strong> Enter VOR frequency in NAV radio (e.g. 112.50 for ODE). Verify frequency displayed in active window.</li>
-              <li><strong>SELECT:</strong> Set OBS (Omni Bearing Selector) to the desired course (inbound or outbound radial). Verify TO/FROM flag appears.</li>
-              <li><strong>IDENT:</strong> Listen for Morse code identifier (---  -.. for ODE = "ODE"). Confirm within 5 seconds. Call out: <span class="callout-tag">"Station ident confirmed — ODE"</span></li>
-            </ol>
-          </div>
-          <div>
-            <div class="phase-label">▸ Determining Aircraft Position</div>
-            <ol class="procedure-list" start="4">
-              <li>Rotate OBS until CDI centres with TO flag → read OBS — this is the bearing TO the station (reciprocal = radial you are on).</li>
-              <li>Rotate OBS until CDI centres with FROM flag → read OBS — this is the radial you are on (bearing FROM station).</li>
-              <li>Cross-reference radial from two VORs or VOR + fix → plot position on chart.</li>
-            </ol>
-          </div>
-        </div>
-        <div class="instr-note">
-          <div class="instr-note-label">FI Note</div>
-          <div class="instr-note-text">Have the student practice the TUNE-SELECT-IDENT sequence on the ground during the pre-flight, then again in the air before use. Common error: tuning the correct frequency but not waiting for IDENT before starting to navigate. Reinforce: "If you haven't heard the dots and dashes, you haven't tuned it."</div>
-        </div>
-      </div>
-    </div>
-
   </div>
+
   <div class="page-footer">
-    <span class="footer-left">Center Air · CAPA · SOP E2R1</span>
-    <span class="footer-mid">DGH 11/12 — USE OF VOR</span>
-    <span class="footer-right">Page 2 · ENVIRONMENT &amp; SETUP</span>
+    <span>Center Air · CAPA · SOP E2R1</span>
+    <span class="footer-mid">Taxi & Run-Up · GND 01</span>
+    <span>© 2026 CAPA Flight School</span>
   </div>
 </div>
 
-
-<!-- PAGE 3 — SECTION 03: EXECUTION -->
+<!-- PAGE 2 — GROUND OPERATIONS -->
 <div class="page">
   <div class="page-header">
     <span class="org-name">Center Air · CAPA</span>
-    <span class="lesson-id-tag">DGH 11/12 · USE OF VOR</span>
-    <span class="page-num">Page 3</span>
+    <span class="lesson-id-tag">GND 01 · Taxi & Run-Up</span>
+    <span class="page-num">Page 2/3</span>
   </div>
-  <div class="page-body">
 
-    <div class="section-banner" data-num="03">
-      <div class="section-num">03</div>
+  <div class="page-body">
+    <!-- SECTION 1: TAXI PROCEDURES -->
+    <div class="section-banner" data-num="1" style="margin-bottom:10px;">
+      <div class="section-num">1</div>
       <div class="section-text">
-        <div class="section-title">Execution</div>
-        <div class="section-subtitle">Radial interception · tracking · wind correction · station passage</div>
+        <div class="section-title">Taxi Procedures</div>
+        <div class="section-subtitle">ATC clearance · taxiway navigation · crosswind technique · runway crossings</div>
       </div>
     </div>
 
-    <div class="content-block block-manoeuvre no-break">
+    <div class="content-block block-sop">
       <div class="block-header">
-        <span class="block-type-pill">Procedure</span>
-        <span class="block-title">VOR Radial Interception — 60° Standard Angle</span>
+        <span class="block-type-pill">SOP</span>
+        <span class="block-title">Obtaining Clearance & Initial Taxi</span>
       </div>
       <div class="block-body">
-        <div class="key-principle">
-          <div class="key-principle-label">Key Principle</div>
-          <div class="key-principle-text">Standard intercept angle = 60° to the desired course. Do NOT use 90° (overshoots) or 30° (takes too long). Lead the turn: start turning when CDI has approximately 2 dots to go, using the lead angles below.</div>
-        </div>
-        <div class="two-col">
-          <div>
-            <div class="phase-label">▸ Intercept Procedure (Inbound)</div>
-            <ol class="procedure-list">
-              <li>TUNE-SELECT-IDENT the VOR. Set OBS to desired inbound course.</li>
-              <li>Determine which side of the radial the aircraft is on — note CDI deflection direction.</li>
-              <li>Turn aircraft to intercept heading = desired course ± 60° (toward CDI deflection).</li>
-              <li>Monitor CDI. Call out: <span class="callout-tag">"Needle alive"</span> when CDI begins moving.</li>
-              <li>Apply lead point — begin turn to WCH when CDI reaches: 60° intercept = ~20° from centre, 90° = ~30°, 30° = ~10°.</li>
-              <li>Roll out on WCH with CDI centred and TO flag showing. Call: <span class="callout-tag">"Established inbound — ODE — [radial]"</span></li>
-            </ol>
-          </div>
-          <div>
-            <div class="phase-label">▸ Tracking on Radial (Wind Correction)</div>
-            <ol class="procedure-list" start="7">
-              <li>If CDI deflects right: aircraft drifting left — turn right 10°. Hold for 60 sec.</li>
-              <li>Assess CDI movement: if returning to centre, WCA is correct. If continuing drift, add another 5°.</li>
-              <li>When CDI recentres: reduce correction by half. Hold new WCH — this is your estimated WCA.</li>
-              <li>Maintain WCH with CDI centred — do not chase small deflections. Stabilise first, then adjust.</li>
-            </ol>
-          </div>
-        </div>
+        <p style="margin-bottom:8px;"><strong>Cleared to taxi:</strong></p>
+        <ul class="procedure-list">
+          <li>Read back runway, taxiway routing, and hold-short instructions — verify ATC acknowledges</li>
+          <li>Check instruments once more: heading indicator correct, lights on, landing gear check</li>
+          <li>Release parking brake and apply slow, controlled power — walking pace only (~5 knots)</li>
+          <li>In congested areas or narrow taxiways, reduce speed further — aim for minimal thrust needed</li>
+        </ul>
         <div class="sop-strip">
-          <span class="sop-badge">SOP</span>
-          <span class="sop-text">Turn to WCH when needle centres — do not overshoot by continuing on intercept heading past centre</span>
-          <span class="sop-section">§ 1.22.6</span>
+          <span class="sop-badge">SOP E2R1 §1.4</span>
+          <span class="sop-text">Always obtain explicit ATC clearance before entering any runway. Read back all runway crossing/take-off clearances.</span>
         </div>
       </div>
     </div>
 
-    <div class="content-block block-theory no-break">
+    <div class="spacer-sm"></div>
+
+    <div class="content-block block-technique">
       <div class="block-header">
-        <span class="block-type-pill">Theory</span>
-        <span class="block-title">Station Passage &amp; Outbound Tracking</span>
+        <span class="block-type-pill">TECHNIQUE</span>
+        <span class="block-title">En Route — Turns & Attitude</span>
       </div>
       <div class="block-body">
-        <div class="two-col">
+        <ul class="procedure-list">
+          <li>Use differential braking for turns — <strong>NOT</strong> excessive speed into corners</li>
+          <li>Apply opposing brake gently; coordinate with nose wheel steering (if equipped)</li>
+          <li>When tail/nose attitude blocks forward view: execute shallow S-turns to see ahead</li>
+          <li>Crosswind taxi technique: aileron into wind (upwind aileron UP) — prevents weathercocking</li>
+          <li>Wings level in calm conditions; maintain the crosswind correction throughout taxi</li>
+          <li>Stop-and-look at all runway crossings — even with explicit ATC clearance, visually verify clear</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="spacer-sm"></div>
+
+    <!-- SECTION 2: PRE-RUN-UP CHECKS -->
+    <div class="section-banner" data-num="2" style="margin-top:10px;margin-bottom:10px;">
+      <div class="section-num">2</div>
+      <div class="section-text">
+        <div class="section-title">Pre-Run-Up Checks</div>
+        <div class="section-subtitle">Run-up area positioning · systems verification · temperature limits</div>
+      </div>
+    </div>
+
+    <div class="content-block block-check">
+      <div class="block-header">
+        <span class="block-type-pill">CHECKS</span>
+        <span class="block-title">Run-Up Position & System Status</span>
+      </div>
+      <div class="block-body">
+        <ul class="procedure-list">
+          <li>Position aircraft into wind, clear of other aircraft, clear of prop blast hazards</li>
+          <li>Set parking brake firmly — hold brakes throughout run-up; do not rely on friction lock alone</li>
+          <li>Oil temperature: must be >50°C before run-up power is applied (ROTAX requirement)</li>
+          <li>Oil pressure: confirm 2.0–5.0 bar (normal range on gauge)</li>
+          <li>Fuel selection: select both tanks; use fullest tank on selector if available</li>
+          <li>Fuel pressure: confirm 2.8–3.2 bar within specification</li>
+          <li>Throttle friction: adjust to prevent creep during climb — set resistance appropriately</li>
+          <li>Flight controls: cycle pitch, roll, yaw fully and freely — confirm no stiffness or binding (EFATO consideration)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="spacer-sm"></div>
+
+    <!-- SECTION 3: ENGINE RUN-UP -->
+    <div class="section-banner" data-num="3" style="margin-top:10px;margin-bottom:10px;">
+      <div class="section-num">3</div>
+      <div class="section-text">
+        <div class="section-title">Engine Run-Up — ROTAX 912 iSc 3</div>
+        <div class="section-subtitle">Fuel-injected engine · dual electronic ignition (LANE A/B) · health checks</div>
+      </div>
+    </div>
+
+    <div class="instr-note">
+      <div class="instr-note-label">IMPORTANT NOTE</div>
+      <div class="instr-note-text">The ROTAX 912 iSc 3 is <strong>fuel-injected</strong> — no carburettor heat check applies. It uses dual electronic ignition (LANE A and LANE B) in place of magnetos. Ignition system switches are your primary electrical systems check during run-up.</div>
+    </div>
+
+    <div class="spacer-sm"></div>
+
+    <div class="content-block block-check">
+      <div class="block-header">
+        <span class="block-type-pill">CHECKS</span>
+        <span class="block-title">ROTAX 912 iSc 3 Run-Up Sequence</span>
+      </div>
+      <div class="block-body">
+        <ul class="procedure-list">
+          <li>Set 3000 RPM: hold brakes firmly with both feet, advance throttle to 3000 RPM (baseline)</li>
+          <li>LANE A check: switch ignition to LANE A only — observe RPM drop. Maximum acceptable drop: 50 RPM</li>
+          <li>Switch to BOTH LANES — confirm RPM returns to 3000 RPM baseline</li>
+          <li>LANE B check: from BOTH, switch ignition to LANE B only — observe RPM drop. Maximum acceptable drop: 50 RPM</li>
+          <li>Return to BOTH LANES — confirm stable 3000 RPM</li>
+          <li>Throttle response check: advance smoothly from 3000 RPM to 2250 RPM (MCP setting) — check for immediate response, no hesitation or lag</li>
+          <li>Return to idle (1000–1100 RPM target) — confirm minimum stable idle of 1400 RPM after warm-up</li>
+          <li>EGT and engine temperatures: all parameters in green range — no red-line exceedances</li>
+        </ul>
+
+        <div class="caution-strip" style="margin-top:10px;">
+          <div class="warn-icon">⚠</div>
           <div>
-            <div class="phase-label">▸ Station Passage</div>
-            <ul class="brief-list">
-              <li>As aircraft overflies station: CDI becomes erratic, TO/FROM flag oscillates or blanks</li>
-              <li>Call out: <span class="callout-tag">"Station passage — [time]"</span></li>
-              <li>Note time — use for position reporting and ETE calculations outbound</li>
-              <li>After passage: TO/FROM flips to FROM — reset OBS to outbound course (reciprocal)</li>
-              <li>Brief cone of silence: CDI reliable approximately 30 sec after passage at normal speeds</li>
-            </ul>
-          </div>
-          <div>
-            <div class="phase-label">▸ Outbound Tracking</div>
-            <ul class="brief-list">
-              <li>Set OBS to outbound course (FROM radial). CDI mechanics are the same — needle flies toward the course.</li>
-              <li>Wind correction technique identical to inbound — bracket then halve corrections</li>
-              <li>FROM indication is normal outbound — do not confuse with nav error</li>
-              <li>Monitor elapsed time — use for fuel estimation and ETA calculation</li>
-            </ul>
-          </div>
-        </div>
-        <div class="caution-strip">
-          <span class="warn-icon">⚠️</span>
-          <div>
-            <div class="warn-title">Reverse Sensing</div>
-            <div class="warn-text">If flying outbound on a FROM course with incorrect OBS set to the inbound course — CDI will show reverse deflection. Flying toward the needle will take you off course. Always verify TO/FROM flag matches your direction of flight before making corrections.</div>
+            <div class="warn-title">ROTAX 912 iSc 3 LANE CHECK LIMITS</div>
+            <div class="warn-text">Maximum acceptable RPM drop on single-lane operation is <strong>50 RPM</strong>. If drop exceeds 50 RPM or engine runs rough on either lane — DO NOT DEPART. Report defect to maintenance immediately.</div>
           </div>
         </div>
       </div>
     </div>
 
   </div>
+
   <div class="page-footer">
-    <span class="footer-left">Center Air · CAPA · SOP E2R1</span>
-    <span class="footer-mid">DGH 11/12 — USE OF VOR</span>
-    <span class="footer-right">Page 3 · EXECUTION</span>
+    <span>Center Air · CAPA · SOP E2R1</span>
+    <span class="footer-mid">Taxi & Run-Up · GND 01</span>
+    <span>© 2026 CAPA Flight School</span>
   </div>
 </div>
 
-
-<!-- PAGE 4 — SECTION 04: CHECK -->
+<!-- PAGE 3 — PRE-TAKE-OFF & DEBRIEF -->
 <div class="page">
   <div class="page-header">
     <span class="org-name">Center Air · CAPA</span>
-    <span class="lesson-id-tag">DGH 11/12 · USE OF VOR</span>
-    <span class="page-num">Page 4</span>
+    <span class="lesson-id-tag">GND 01 · Taxi & Run-Up</span>
+    <span class="page-num">Page 3/3</span>
   </div>
-  <div class="page-body">
 
-    <div class="section-banner" data-num="04">
-      <div class="section-num">04</div>
+  <div class="page-body">
+    <!-- SECTION 4: PRE-TAKE-OFF CHECKS -->
+    <div class="section-banner" data-num="4" style="margin-bottom:10px;">
+      <div class="section-num">4</div>
       <div class="section-text">
-        <div class="section-title">Check</div>
-        <div class="section-subtitle">Assessment standards · debrief guide · knowledge questions · progression</div>
+        <div class="section-title">Pre-Take-Off Checks (BUMFICH)</div>
+        <div class="section-subtitle">Final configuration · systems armed · ready to enter runway</div>
       </div>
     </div>
 
-    <div class="content-block block-sop no-break">
+    <div class="content-block block-check">
       <div class="block-header">
-        <span class="block-type-pill">Standards</span>
-        <span class="block-title">Performance Standards (SOP §1.22.6)</span>
+        <span class="block-type-pill">CHECKS</span>
+        <span class="block-title">BUMFICH Mnemonic — Final Pre-Departure</span>
       </div>
       <div class="block-body">
-        <div class="two-col">
-          <div>
-            <div class="phase-label">▸ Minimum Acceptable Performance</div>
-            <ul class="brief-list checks">
-              <li>Completes TUNE-SELECT-IDENT without prompting, within 60 seconds of instruction</li>
-              <li>Sets correct OBS for desired course and states inbound/outbound intent</li>
-              <li>Intercepts radial within ±1 CDI dot of centre using 60° angle</li>
-              <li>Applies WCA to maintain track — does not chase needle continuously</li>
-              <li>Identifies station passage and calls time correctly</li>
-              <li>Maintains Alt ±100 ft and S&amp;L flight throughout nav exercise</li>
-            </ul>
-          </div>
-          <div>
-            <div class="phase-label">▸ Progression Decision</div>
-            <ul class="brief-list">
-              <li>Consolidation (repeat): fails IDENT check, cannot determine position, reverses CDI corrections, loses aircraft control during head-down work</li>
-              <li>Progress (continue): consistent TUNE-SELECT-IDENT discipline, clean intercept within tolerance, stable tracking demonstrated</li>
-            </ul>
-          </div>
+        <ul class="procedure-list">
+          <li><strong>B</strong>rakes — set during check, release only when ready to enter runway</li>
+          <li><strong>U</strong>ndercarriage — fixed gear confirmed (visual check, no retract mechanism available)</li>
+          <li><strong>M</strong>ixture/Fuel — fuel sufficient for flight + reserve, correct tank selected, pressure normal</li>
+          <li><strong>F</strong>laps — set for take-off (Flap 1 per CAPA SOP — typically 5–10° depending on AFM)</li>
+          <li><strong>I</strong>nstruments — altimeter set to QNH, directional indicator aligned to magnetic compass, artificial horizon erect</li>
+          <li><strong>C</strong>ompass — swing check against known heading; confirm compass and DI are aligned</li>
+          <li><strong>H</strong>atches/Harness — canopy latched and locked, all harnesses tight and locked, doors secure</li>
+        </ul>
+
+        <div class="sop-strip" style="margin-top:10px;">
+          <span class="sop-badge">SOP E2R1 §1.5</span>
+          <span class="sop-text">T/O config: Flap 1 · MCP (2250 RPM) to 500 ft AGL minimum before any power reduction.</span>
         </div>
       </div>
     </div>
 
-    <div class="content-block block-debrief no-break">
+    <div class="spacer"></div>
+
+    <!-- SECTION 5: DEBRIEF CRITERIA -->
+    <div class="section-banner" data-num="5" style="margin-bottom:10px;">
+      <div class="section-num">5</div>
+      <div class="section-text">
+        <div class="section-title">Debrief & Self-Assessment</div>
+        <div class="section-subtitle">Evaluation criteria · learning review · next steps</div>
+      </div>
+    </div>
+
+    <div class="content-block block-debrief">
       <div class="block-header">
-        <span class="block-type-pill">Debrief</span>
-        <span class="block-title">Structured Debrief Guide</span>
+        <span class="block-type-pill">DEBRIEF</span>
+        <span class="block-title">Debrief Criteria & Performance Review</span>
       </div>
       <div class="block-body">
         <div class="debrief-list">
           <div class="debrief-item">
             <div class="debrief-num">1</div>
-            <span>Walk through your TUNE-SELECT-IDENT sequence — at which step did you verify the station was usable?</span>
+            <span>Was ATC clearance obtained and read back correctly before moving? Did you verify all hold-short and routing instructions?</span>
           </div>
           <div class="debrief-item">
             <div class="debrief-num">2</div>
-            <span>Describe how you determined which side of the radial you were on before the intercept. What did the CDI tell you?</span>
+            <span>Was taxi speed appropriate (walking pace)? Did you avoid excessive power and unnecessary acceleration?</span>
           </div>
           <div class="debrief-item">
             <div class="debrief-num">3</div>
-            <span>On the intercept, when did you start your turn-on? Did you overshoot or undershoot the radial?</span>
+            <span>Was run-up position correct (into wind, clear of hazards)? Did you set parking brake firmly?</span>
           </div>
           <div class="debrief-item">
             <div class="debrief-num">4</div>
-            <span>What wind correction did you settle on? How did you arrive at it — bracket and halve, or did you guess?</span>
+            <span>Was oil temperature verified >50°C before applying run-up power? Why is this critical for ROTAX engines?</span>
           </div>
           <div class="debrief-item">
             <div class="debrief-num">5</div>
-            <span>What happened at station passage? How did you recognise it, and what did you do immediately after?</span>
+            <span>Were LANE A/B checks conducted correctly? Did you understand what RPM drop >50 RPM would indicate?</span>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">6</div>
+            <span>Were all BUMFICH items completed before entering runway? Did you confirm every switch and system?</span>
+          </div>
+          <div class="debrief-item">
+            <div class="debrief-num">7</div>
+            <span>Any defects identified during run-up or checks? How would you handle a failed system check?</span>
+          </div>
+        </div>
+
+        <div class="warn-strip" style="margin-top:12px;">
+          <div class="warn-icon">🛑</div>
+          <div>
+            <div class="warn-title">SCHEDULE PRESSURE IS NOT AN EXCUSE</div>
+            <div class="warn-text">NEVER RUSH PRE-DEPARTURE CHECKS. No schedule pressure, no waiting passengers, no delays justify skipping any item on the checklist. If in doubt about any system: <strong>stay on the ground.</strong> A 30-minute ground delay is better than a 30-minute search-and-rescue callout.</div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="content-block block-check no-break">
-      <div class="block-header">
-        <span class="block-type-pill">Review</span>
-        <span class="block-title">End-of-Lesson Knowledge Check</span>
-      </div>
-      <div class="block-body">
-        <div class="two-col">
-          <div>
-            <ul class="brief-list">
-              <li>What does the TO/FROM flag indicate? When does it switch?</li>
-              <li>What is the standard interception angle for a VOR radial?</li>
-              <li>How do you calculate the lead point for a 60° intercept?</li>
-              <li>What causes reverse sensing and how do you avoid it?</li>
-            </ul>
-          </div>
-          <div>
-            <ul class="brief-list">
-              <li>What is the cone of silence? How do you recognise it?</li>
-              <li>What frequency band does VOR operate on?</li>
-              <li>Why must you always listen to the IDENT before using a VOR?</li>
-              <li>Describe the bracket-and-halve wind correction technique.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="spacer"></div>
+
+    <div class="key-principle">
+      <div class="key-principle-label">CORE PRINCIPLE</div>
+      <div class="key-principle-text">Thorough ground operations set the foundation for safe flight. Every checklist item exists because something went wrong once. Respect the procedures.</div>
     </div>
 
     <div class="apa-references no-break">
@@ -725,15 +633,17 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
       <div class="apa-ref-list">
         <div class="apa-ref-entry">Center Air APS. (2025, November). <em>CAPA standard operating procedure</em> (Ed. 2, Rev. 1). Center Air APS.</div>
         <div class="apa-ref-entry">ATP International. (2020). <em>ATP integrated airline training programme — lesson preparation</em> [Student notes]. Center Air Pilot Academy.</div>
+        <div class="apa-ref-entry">BRP-Rotax GmbH &amp; Co. KG. (2024). <em>ROTAX 912 iSc series operator's manual</em>. BRP-Rotax GmbH &amp; Co. KG.</div>
         <div class="apa-ref-entry">Costruzioni Aeronautiche TECNAM S.p.A. (2024, October). <em>P-Mentor aircraft flight manual</em> (Doc. No. 2002/1032, Ed. 1, Rev. 10). Costruzioni Aeronautiche TECNAM S.p.A.</div>
-        <div class="apa-ref-entry">Garmin Ltd. (2024). <em>GNC 255 nav/comm pilot's guide</em>. Garmin Ltd.</div>
       </div>
     </div>
+
   </div>
+
   <div class="page-footer">
-    <span class="footer-left">Center Air · CAPA · SOP E2R1</span>
-    <span class="footer-mid">DGH 11/12 — USE OF VOR</span>
-    <span class="footer-right">Page 4 · CHECK</span>
+    <span>Center Air · CAPA · SOP E2R1</span>
+    <span class="footer-mid">Taxi & Run-Up · GND 01</span>
+    <span>© 2026 CAPA Flight School</span>
   </div>
 </div>
 

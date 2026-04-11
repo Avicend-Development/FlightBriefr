@@ -175,6 +175,11 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
 @media screen {
   .page{box-shadow:0 4px 24px rgba(0,0,0,0.20);border-radius:2px;margin:12mm auto;}
 }
+/* APA7 References */
+.apa-references{border-top:2px solid var(--grey-200);padding-top:8px;margin-top:10px;}
+.apa-ref-heading{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
+.apa-ref-list{display:flex;flex-direction:column;gap:4px;}
+.apa-ref-entry{font-size:9px;color:var(--grey-700);line-height:1.5;padding-left:18px;text-indent:-18px;font-family:var(--font-body);}
 </style>
 </head>
 <body>
@@ -446,11 +451,11 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
               <li>Clear of cloud: minimum 1500 ft horizontally — maintain VMC throughout</li>
               <li>Clear of controlled airspace — check chart for practice area boundaries</li>
               <li>Light turbulence or less — moderate turbulence can cause structural exceedance at high bank</li>
-              <li>HASELL check mandatory before each exercise: Height, Airspace, Security, Engine, Location, Lookout</li>
+              <li>ACSEL check mandatory before each exercise: Height, Airspace, Security, Engine, Location, Lookout</li>
             </ul>
             <div class="sop-strip">
               <span class="sop-badge">SOP</span>
-              <span class="sop-text">HASELL check required before all steep turn exercises — no exceptions</span>
+              <span class="sop-text">ACSEL check required before all steep turn exercises — no exceptions</span>
               <span class="sop-section">§ 1.22.4</span>
             </div>
           </div>
@@ -459,7 +464,7 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
           <span class="warn-icon">⛔</span>
           <div>
             <div class="warn-title">Steep Turn No-Go Criteria</div>
-            <div class="warn-text">Do NOT commence if: altitude below 3000 ft AGL · turbulence moderate or above · aircraft not within VA · HASELL check incomplete · student unable to maintain S&amp;L flight within normal tolerances (prerequisite not met).</div>
+            <div class="warn-text">Do NOT commence if: altitude below 3000 ft AGL · turbulence moderate or above · aircraft not within VA · ACSEL check incomplete · student unable to maintain S&amp;L flight within normal tolerances (prerequisite not met).</div>
           </div>
         </div>
       </div>
@@ -469,14 +474,14 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
       <div class="section-num">02</div>
       <div class="section-text">
         <div class="section-title">Setup</div>
-        <div class="section-subtitle">HASELL check · entry airspeed · entry heading selection · power setting</div>
+        <div class="section-subtitle">ACSEL check · entry airspeed · entry heading selection · power setting</div>
       </div>
     </div>
 
     <div class="content-block block-manoeuvre no-break">
       <div class="block-header">
         <span class="block-type-pill">Procedure</span>
-        <span class="block-title">HASELL Check &amp; Entry Setup</span>
+        <span class="block-title">ACSEL Check &amp; Entry Setup</span>
       </div>
       <div class="block-body">
         <div class="key-principle">
@@ -485,14 +490,13 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         </div>
         <div class="two-col">
           <div>
-            <div class="phase-label">▸ HASELL Check</div>
+            <div class="phase-label">▸ ACSEL Check</div>
             <ol class="procedure-list">
-              <li><strong>H</strong> — Height: sufficient for recovery (min 3000 ft AGL). Note altitude for return to level flight.</li>
-              <li><strong>A</strong> — Airspace: clear of controlled airspace, restricted areas, and airways.</li>
-              <li><strong>S</strong> — Security: harnesses tight, loose articles stowed.</li>
-              <li><strong>E</strong> — Engine: temperatures and pressures in green, carb heat check.</li>
-              <li><strong>L</strong> — Location: known position — near recognisable landmark.</li>
-              <li><strong>L</strong> — Lookout: 360° clearing turn (or two 180° turns) — check above, below, and all quadrants.</li>
+              <li><strong>A</strong> — Altitude: minimum height for the exercise (min 3000 ft AGL). Verify safe recovery altitude.</li>
+              <li><strong>C</strong> — Configuration: clean aircraft, no loose items stowed, control surfaces free.</li>
+              <li><strong>S</strong> — Safety: lookout complete, harnesses secure, student briefed.</li>
+              <li><strong>E</strong> — Engine: ROTAX temperatures and pressures green, carb heat check.</li>
+              <li><strong>L</strong> — Location: practice area, clear of CAS, known position near recognisable landmark.</li>
             </ol>
           </div>
           <div>
@@ -654,7 +658,7 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
           <div>
             <div class="phase-label">▸ Minimum Acceptable Performance</div>
             <ul class="brief-list checks">
-              <li>HASELL check completed before each exercise without prompting</li>
+              <li>ACSEL check completed before each exercise without prompting</li>
               <li>Bank angle maintained 45° ±5° throughout the turn</li>
               <li>Altitude maintained ±100 ft entry altitude</li>
               <li>Ball centred — coordinated flight demonstrated</li>
@@ -667,7 +671,7 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
             <div class="phase-label">▸ Progression Decision</div>
             <ul class="brief-list">
               <li>Consolidation (repeat): bank exceeds 50° routinely, altitude loss &gt;200 ft, aggressive back pressure near stall, ball consistently displaced, no lead on roll-out</li>
-              <li>Progress (continue): tolerances met on 3 consecutive turns (both directions), HASELL consistent, entry/exit technique smooth</li>
+              <li>Progress (continue): tolerances met on 3 consecutive turns (both directions), ACSEL consistent, entry/exit technique smooth</li>
             </ul>
           </div>
         </div>
@@ -722,13 +726,22 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
           </div>
           <div>
             <ul class="brief-list">
-              <li>What are the six elements of a HASELL check?</li>
+              <li>What are the five elements of an ACSEL check?</li>
               <li>How much heading lead should you apply for roll-out from 45°?</li>
               <li>If altitude drops in the steep turn, what is the correct corrective input?</li>
               <li>What is VA and why does it matter for steep turns?</li>
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="apa-references no-break">
+      <div class="apa-ref-heading">References</div>
+      <div class="apa-ref-list">
+        <div class="apa-ref-entry">Center Air APS. (2025, November). <em>CAPA standard operating procedure</em> (Ed. 2, Rev. 1). Center Air APS.</div>
+        <div class="apa-ref-entry">ATP International. (2020). <em>ATP integrated airline training programme — lesson preparation</em> [Student notes]. Center Air Pilot Academy.</div>
+        <div class="apa-ref-entry">Costruzioni Aeronautiche TECNAM S.p.A. (2024, October). <em>P-Mentor aircraft flight manual</em> (Doc. No. 2002/1032, Ed. 1, Rev. 10). Costruzioni Aeronautiche TECNAM S.p.A.</div>
       </div>
     </div>
 
