@@ -572,14 +572,16 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
         <span class="block-title">Go-Around Execution</span>
       </div>
       <div class="block-body">
-        <ul class="procedure-list">
-          <li><strong>POWER:</strong> Apply full power — MCP 2250 RPM — smoothly but promptly. (Not a jab; smooth and firm.)</li>
-          <li><strong>ATTITUDE:</strong> Establish climb attitude (approximately 10–12° nose-up). Target airspeed 56 kt minimum (VY safe).</li>
-          <li><strong>FLAP:</strong> Retract flap immediately: Flap 2 → Flap 1 (when positive ROC is established), then Flap 1 → Clean (at 70 kt airspeed).</li>
-          <li><strong>CLIMB:</strong> Establish 70 kt climb, maintain runway centreline (do not turn until positive ROC confirmed).</li>
-          <li><strong>COMMUNICATE:</strong> Call "Going around" — blind call or contact ATC if on frequency.</li>
-          <li>Once positive ROC confirmed and safe altitude gained (minimum 300 ft AAL), continue with downwind leg spacing to re-enter circuit.</li>
-        </ul>
+        <p class="prose" style="margin-bottom:8px;">CAPA callout sequence per SOP §1.20 — spoken aloud as each action is performed. Power application: prop full forward first, then throttle (right to left, smooth and gentle).</p>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:10px;color:var(--grey-700);">
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="callout-tag">"Going around - Full power"</span><span style="padding-top:2px;"> – Initial combined call. Prop full forward → throttle full forward. Begin rotating nose toward G/A attitude.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="callout-tag">"Flaps 1 or less"</span><span style="padding-top:2px;"> – Select Flap 1. Never retract directly 2 → 0 at low speed and altitude.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="callout-tag">"G/A attitude"</span><span style="padding-top:2px;"> – Set and verify go-around pitch attitude. Accelerate through Vx 56 KIAS maintaining positive ROC.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="callout-tag">"Positive ROC"</span><span style="padding-top:2px;"> – VSI confirms climb. Aircraft ascending, not descending.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="callout-tag">"Safe speed"</span><span style="padding-top:2px;"> – Above Vx (56 KIAS). Safe to retract flaps — do not let nose drop.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="callout-tag">"Flaps UP"</span><span style="padding-top:2px;"> – Retract flaps fully. Trim back. Accelerate to Vy 70 KIAS.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="callout-tag">"Max continuous power"</span><span style="padding-top:2px;"> – At 400 ft AGL, set 2250 RPM MCP. Advise ATC; maintain sequence and re-join circuit.</span></div>
+        </div>
 
         <div class="warn-strip">
           <div class="warn-icon">!</div>
