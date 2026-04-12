@@ -141,8 +141,8 @@
       const currentFile = document.getElementById("current-file");
 
       try {
-        const response = await fetch("./briefings/files.json");
-        if (!response.ok) throw new Error("Could not load briefings/files.json");
+        const response = await fetch("./briefings/briefings.json");
+        if (!response.ok) throw new Error("Could not load briefings/briefings.json");
 
         const files = await response.json();
         const htmlFiles = files
@@ -150,7 +150,7 @@
           .sort((a, b) => a.localeCompare(b));
 
         if (!htmlFiles.length) {
-          controls.textContent = "No HTML briefing files found in briefings/files.json.";
+          controls.textContent = "No HTML briefing files found in briefings/briefings.json.";
           return;
         }
 
