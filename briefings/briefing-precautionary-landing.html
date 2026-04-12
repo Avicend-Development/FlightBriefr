@@ -173,6 +173,8 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
 @media screen {
   .page{box-shadow:0 4px 24px rgba(0,0,0,0.20);border-radius:2px;margin:12mm auto;}
 }
+/* spoken callout — amber, for pilot verbalised calls */
+.spoken{font-family:var(--font-mono);font-size:9.5px;background:rgba(232,160,32,0.18);color:#7A5000;border:1px solid rgba(232,160,32,0.5);padding:2px 9px;border-radius:3px;display:inline-block;margin:1px 0;font-weight:600;}
 /* APA7 References */
 .apa-references{border-top:2px solid var(--grey-200,#E8ECF0);padding-top:8px;margin-top:10px;}
 .apa-ref-heading{font-family:var(--font-display,'Barlow Condensed',sans-serif);font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy,#0D1B2A);margin-bottom:6px;}
@@ -557,9 +559,38 @@ body{font-family:var(--font-body);color:var(--navy);background:#D0D8E0;line-heig
       <div class="block-body">
         <ul class="brief-list">
           <li><strong>Below 300 ft:</strong> committed to landing — no further assessment</li>
-          <li><strong>If approach unstabilised:</strong> apply MCP and go around (power available)</li>
+          <li><strong>If approach unstabilised above 300 ft:</strong> go around immediately — engine is running, full power available</li>
           <li><strong>If approach good:</strong> continue, threshold 63 kt, flare, touchdown</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="spacer-sm"></div>
+
+    <div class="content-block block-manoeuvre no-break">
+      <div class="block-header">
+        <span class="block-type-pill">CAPA Procedure</span>
+        <span class="block-title">Go-Around — CAPA Callout Sequence (SOP §1.20)</span>
+      </div>
+      <div class="block-body">
+        <div class="key-principle" style="margin-bottom:9px;">
+          <div class="key-principle-label">Key Difference from Forced Landing</div>
+          <div class="key-principle-text">In a precautionary landing the engine is running — a go-around is always available above the committal point (300 ft AGL). Multiple passes are normal. Use every go-around to reassess the landing area.</div>
+        </div>
+        <p class="prose" style="margin-bottom:7px;">Apply the full CAPA go-around callout sequence per SOP §1.20. Prop full forward first, then throttle (right to left — smooth and gentle).</p>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:10px;color:var(--grey-700);">
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="spoken">"Going around - Full power"</span><span style="padding-top:2px;"> – Combined initial call. Prop full forward → throttle full forward. Begin rotating nose toward G/A attitude.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="spoken">"Flaps 1 or less"</span><span style="padding-top:2px;"> – Select Flap 1 if extended. Never retract directly from Flap 2 to 0 at low speed and altitude.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="spoken">"G/A attitude"</span><span style="padding-top:2px;"> – Set and verify go-around pitch attitude. Accelerate through Vx 56 KIAS maintaining positive ROC.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="spoken">"Positive ROC"</span><span style="padding-top:2px;"> – Confirm VSI shows climb before retracting flaps further.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="spoken">"Safe speed"</span><span style="padding-top:2px;"> – Above Vx (56 KIAS). Safe to retract flaps — do not let nose drop.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="spoken">"Flaps UP"</span><span style="padding-top:2px;"> – Retract flaps fully. Trim back. Accelerate to Vy 70 KIAS.</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span class="spoken">"Max continuous power"</span><span style="padding-top:2px;"> – At 400 ft AGL, set 2250 RPM MCP. Advise ATC/radio; re-assess field for next pass or departure.</span></div>
+        </div>
+        <div class="sop-strip" style="margin-top:8px;">
+          <span class="sop-badge">SOP §1.20</span>
+          <span class="sop-text">Aviate first — communicate after. Do not advise ATC of the go-around until the procedure is complete and the aircraft is under full control.</span>
+        </div>
       </div>
     </div>
 
